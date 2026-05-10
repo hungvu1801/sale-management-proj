@@ -129,14 +129,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="icons\icons8-brand-lineal-color.zip" />
-    <None Include="icons\icons8-category-outline-hand-drawn.zip" />
-    <None Include="icons\icons8-distributor-color-hand-drawn.zip" />
-    <None Include="icons\icons8-employee-doodle.zip" />
-    <None Include="icons\icons8-product.zip" />
-    <None Include="icons\icons8-purchase-order-bubbles.zip" />
-    <None Include="icons\icons8-users-doodle.zip" />
-    <None Include="icons\Icons8invoice.zip" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -149,6 +141,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="icons\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

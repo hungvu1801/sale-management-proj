@@ -30,43 +30,44 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainFrm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chứcNăngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.customersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.distributorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.purchaseOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.invoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.signInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.signoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salesByDayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salseByMonthToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.topBestSellersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportToExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usageInstructionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmSystem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmSignIn = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmSignOut = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmChangePassword = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmQuit = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmFeature = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmProduct = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmEmployee = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmCustomer = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmDistributor = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmPurchase = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmInvoice = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmReport = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmSaleByDay = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmSaleByMonth = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmBestSeller = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmExport = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmUsageIns = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.tsbProduct = new System.Windows.Forms.ToolStripButton();
+            this.tsbEmployee = new System.Windows.Forms.ToolStripButton();
+            this.tsbCustomer = new System.Windows.Forms.ToolStripButton();
+            this.tsbDistributor = new System.Windows.Forms.ToolStripButton();
+            this.tsbPurchase = new System.Windows.Forms.ToolStripButton();
+            this.tsbInvoice = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
+            this.tsbAdd = new System.Windows.Forms.ToolStripButton();
+            this.tsbFix = new System.Windows.Forms.ToolStripButton();
+            this.tsbDelete = new System.Windows.Forms.ToolStripButton();
+            this.tsbSave = new System.Windows.Forms.ToolStripButton();
+            this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
             this.toolStrip3 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
+            this.tsbSearch = new System.Windows.Forms.ToolStripButton();
+            this.tsbPrint = new System.Windows.Forms.ToolStripButton();
+            this.tsbExport = new System.Windows.Forms.ToolStripButton();
+            this.tsbQuit = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -77,323 +78,357 @@
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hệThốngToolStripMenuItem,
-            this.chứcNăngToolStripMenuItem,
-            this.reportToolStripMenuItem,
-            this.helpToolStripMenuItem});
+            this.tsmSystem,
+            this.tsmFeature,
+            this.tsmReport,
+            this.tsmHelp});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1363, 38);
+            this.menuStrip1.Size = new System.Drawing.Size(808, 38);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // hệThốngToolStripMenuItem
+            // tsmSystem
             // 
-            this.hệThốngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.signInToolStripMenuItem,
-            this.signoutToolStripMenuItem,
-            this.changePasswordToolStripMenuItem,
-            this.quitToolStripMenuItem});
-            this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(94, 34);
-            this.hệThốngToolStripMenuItem.Text = "&System";
-            this.hệThốngToolStripMenuItem.Click += new System.EventHandler(this.hệThốngToolStripMenuItem_Click);
+            this.tsmSystem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmSignIn,
+            this.tsmSignOut,
+            this.tsmChangePassword,
+            this.tsmQuit});
+            this.tsmSystem.Name = "tsmSystem";
+            this.tsmSystem.Size = new System.Drawing.Size(94, 34);
+            this.tsmSystem.Text = "&System";
+            this.tsmSystem.Click += new System.EventHandler(this.hệThốngToolStripMenuItem_Click);
             // 
-            // chứcNăngToolStripMenuItem
+            // tsmSignIn
             // 
-            this.chứcNăngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.productToolStripMenuItem,
-            this.employeeToolStripMenuItem,
-            this.customersToolStripMenuItem,
-            this.distributorToolStripMenuItem,
-            this.purchaseOrderToolStripMenuItem,
-            this.invoiceToolStripMenuItem});
-            this.chứcNăngToolStripMenuItem.Name = "chứcNăngToolStripMenuItem";
-            this.chứcNăngToolStripMenuItem.Size = new System.Drawing.Size(98, 34);
-            this.chứcNăngToolStripMenuItem.Text = "&Feature";
+            this.tsmSignIn.Name = "tsmSignIn";
+            this.tsmSignIn.Size = new System.Drawing.Size(256, 34);
+            this.tsmSignIn.Text = "&Sign In";
+            this.tsmSignIn.Click += new System.EventHandler(this.signInToolStripMenuItem_Click);
             // 
-            // helpToolStripMenuItem
+            // tsmSignOut
             // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usageInstructionToolStripMenuItem,
-            this.aboutToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(71, 34);
-            this.helpToolStripMenuItem.Text = "&Help";
+            this.tsmSignOut.Name = "tsmSignOut";
+            this.tsmSignOut.Size = new System.Drawing.Size(256, 34);
+            this.tsmSignOut.Text = "&Sign Out";
             // 
-            // productToolStripMenuItem
+            // tsmChangePassword
             // 
-            this.productToolStripMenuItem.Name = "productToolStripMenuItem";
-            this.productToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
-            this.productToolStripMenuItem.Text = "&Product";
+            this.tsmChangePassword.Name = "tsmChangePassword";
+            this.tsmChangePassword.Size = new System.Drawing.Size(256, 34);
+            this.tsmChangePassword.Text = "&Change Password";
             // 
-            // employeeToolStripMenuItem
+            // tsmQuit
             // 
-            this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
-            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
-            this.employeeToolStripMenuItem.Text = "&Employee";
+            this.tsmQuit.Name = "tsmQuit";
+            this.tsmQuit.Size = new System.Drawing.Size(256, 34);
+            this.tsmQuit.Text = "&Quit";
             // 
-            // customersToolStripMenuItem
+            // tsmFeature
             // 
-            this.customersToolStripMenuItem.Name = "customersToolStripMenuItem";
-            this.customersToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
-            this.customersToolStripMenuItem.Text = "&Customers";
+            this.tsmFeature.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmProduct,
+            this.tsmEmployee,
+            this.tsmCustomer,
+            this.tsmDistributor,
+            this.tsmPurchase,
+            this.tsmInvoice});
+            this.tsmFeature.Name = "tsmFeature";
+            this.tsmFeature.Size = new System.Drawing.Size(98, 34);
+            this.tsmFeature.Text = "&Feature";
             // 
-            // distributorToolStripMenuItem
+            // tsmProduct
             // 
-            this.distributorToolStripMenuItem.Name = "distributorToolStripMenuItem";
-            this.distributorToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
-            this.distributorToolStripMenuItem.Text = "&Distributor";
+            this.tsmProduct.Name = "tsmProduct";
+            this.tsmProduct.Size = new System.Drawing.Size(236, 34);
+            this.tsmProduct.Text = "&Product";
+            this.tsmProduct.Click += new System.EventHandler(this.mainFrm_Click);
             // 
-            // reportToolStripMenuItem
+            // tsmEmployee
             // 
-            this.reportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.salesByDayToolStripMenuItem,
-            this.salseByMonthToolStripMenuItem,
-            this.topBestSellersToolStripMenuItem,
-            this.exportToExcelToolStripMenuItem});
-            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-            this.reportToolStripMenuItem.Size = new System.Drawing.Size(90, 34);
-            this.reportToolStripMenuItem.Text = "&Report";
+            this.tsmEmployee.Name = "tsmEmployee";
+            this.tsmEmployee.Size = new System.Drawing.Size(236, 34);
+            this.tsmEmployee.Text = "&Employee";
+            this.tsmEmployee.Click += new System.EventHandler(this.mainFrm_Click);
             // 
-            // purchaseOrderToolStripMenuItem
+            // tsmCustomer
             // 
-            this.purchaseOrderToolStripMenuItem.Name = "purchaseOrderToolStripMenuItem";
-            this.purchaseOrderToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
-            this.purchaseOrderToolStripMenuItem.Text = "&Purchase Order";
+            this.tsmCustomer.Name = "tsmCustomer";
+            this.tsmCustomer.Size = new System.Drawing.Size(236, 34);
+            this.tsmCustomer.Text = "&Customers";
+            this.tsmCustomer.Click += new System.EventHandler(this.mainFrm_Click);
             // 
-            // invoiceToolStripMenuItem
+            // tsmDistributor
             // 
-            this.invoiceToolStripMenuItem.Name = "invoiceToolStripMenuItem";
-            this.invoiceToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
-            this.invoiceToolStripMenuItem.Text = "&Invoice";
+            this.tsmDistributor.Name = "tsmDistributor";
+            this.tsmDistributor.Size = new System.Drawing.Size(236, 34);
+            this.tsmDistributor.Text = "&Distributor";
+            this.tsmDistributor.Click += new System.EventHandler(this.mainFrm_Click);
             // 
-            // signInToolStripMenuItem
+            // tsmPurchase
             // 
-            this.signInToolStripMenuItem.Name = "signInToolStripMenuItem";
-            this.signInToolStripMenuItem.Size = new System.Drawing.Size(256, 34);
-            this.signInToolStripMenuItem.Text = "&Sign In";
-            this.signInToolStripMenuItem.Click += new System.EventHandler(this.signInToolStripMenuItem_Click);
+            this.tsmPurchase.Name = "tsmPurchase";
+            this.tsmPurchase.Size = new System.Drawing.Size(236, 34);
+            this.tsmPurchase.Text = "&Purchase Order";
+            this.tsmPurchase.Click += new System.EventHandler(this.mainFrm_Click);
             // 
-            // signoutToolStripMenuItem
+            // tsmInvoice
             // 
-            this.signoutToolStripMenuItem.Name = "signoutToolStripMenuItem";
-            this.signoutToolStripMenuItem.Size = new System.Drawing.Size(256, 34);
-            this.signoutToolStripMenuItem.Text = "&Sign Out";
+            this.tsmInvoice.Name = "tsmInvoice";
+            this.tsmInvoice.Size = new System.Drawing.Size(236, 34);
+            this.tsmInvoice.Text = "&Invoice";
+            this.tsmInvoice.Click += new System.EventHandler(this.mainFrm_Click);
             // 
-            // changePasswordToolStripMenuItem
+            // tsmReport
             // 
-            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(256, 34);
-            this.changePasswordToolStripMenuItem.Text = "&Change Password";
+            this.tsmReport.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmSaleByDay,
+            this.tsmSaleByMonth,
+            this.tsmBestSeller,
+            this.tsmExport});
+            this.tsmReport.Name = "tsmReport";
+            this.tsmReport.Size = new System.Drawing.Size(90, 34);
+            this.tsmReport.Text = "&Report";
             // 
-            // quitToolStripMenuItem
+            // tsmSaleByDay
             // 
-            this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(256, 34);
-            this.quitToolStripMenuItem.Text = "&Quit";
+            this.tsmSaleByDay.Name = "tsmSaleByDay";
+            this.tsmSaleByDay.Size = new System.Drawing.Size(238, 34);
+            this.tsmSaleByDay.Text = "Sales by &Day";
             // 
-            // salesByDayToolStripMenuItem
+            // tsmSaleByMonth
             // 
-            this.salesByDayToolStripMenuItem.Name = "salesByDayToolStripMenuItem";
-            this.salesByDayToolStripMenuItem.Size = new System.Drawing.Size(238, 34);
-            this.salesByDayToolStripMenuItem.Text = "Sales by &Day";
+            this.tsmSaleByMonth.Name = "tsmSaleByMonth";
+            this.tsmSaleByMonth.Size = new System.Drawing.Size(238, 34);
+            this.tsmSaleByMonth.Text = "Salse by &Month";
             // 
-            // salseByMonthToolStripMenuItem
+            // tsmBestSeller
             // 
-            this.salseByMonthToolStripMenuItem.Name = "salseByMonthToolStripMenuItem";
-            this.salseByMonthToolStripMenuItem.Size = new System.Drawing.Size(238, 34);
-            this.salseByMonthToolStripMenuItem.Text = "Salse by &Month";
+            this.tsmBestSeller.Name = "tsmBestSeller";
+            this.tsmBestSeller.Size = new System.Drawing.Size(238, 34);
+            this.tsmBestSeller.Text = "Top &Best Sellers";
             // 
-            // topBestSellersToolStripMenuItem
+            // tsmExport
             // 
-            this.topBestSellersToolStripMenuItem.Name = "topBestSellersToolStripMenuItem";
-            this.topBestSellersToolStripMenuItem.Size = new System.Drawing.Size(238, 34);
-            this.topBestSellersToolStripMenuItem.Text = "Top &Best Sellers";
+            this.tsmExport.Name = "tsmExport";
+            this.tsmExport.Size = new System.Drawing.Size(238, 34);
+            this.tsmExport.Text = "&Export to Excel";
             // 
-            // exportToExcelToolStripMenuItem
+            // tsmHelp
             // 
-            this.exportToExcelToolStripMenuItem.Name = "exportToExcelToolStripMenuItem";
-            this.exportToExcelToolStripMenuItem.Size = new System.Drawing.Size(238, 34);
-            this.exportToExcelToolStripMenuItem.Text = "&Export to Excel";
+            this.tsmHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmUsageIns,
+            this.tsmAbout});
+            this.tsmHelp.Name = "tsmHelp";
+            this.tsmHelp.Size = new System.Drawing.Size(71, 34);
+            this.tsmHelp.Text = "&Help";
             // 
-            // usageInstructionToolStripMenuItem
+            // tsmUsageIns
             // 
-            this.usageInstructionToolStripMenuItem.Name = "usageInstructionToolStripMenuItem";
-            this.usageInstructionToolStripMenuItem.Size = new System.Drawing.Size(253, 34);
-            this.usageInstructionToolStripMenuItem.Text = "Usage Instruction";
+            this.tsmUsageIns.Name = "tsmUsageIns";
+            this.tsmUsageIns.Size = new System.Drawing.Size(253, 34);
+            this.tsmUsageIns.Text = "Usage Instruction";
             // 
-            // aboutToolStripMenuItem
+            // tsmAbout
             // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(253, 34);
-            this.aboutToolStripMenuItem.Text = "About";
+            this.tsmAbout.Name = "tsmAbout";
+            this.tsmAbout.Size = new System.Drawing.Size(253, 34);
+            this.tsmAbout.Text = "About";
             // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton3,
-            this.toolStripButton4,
-            this.toolStripButton5,
-            this.toolStripButton6});
+            this.tsbProduct,
+            this.tsbEmployee,
+            this.tsbCustomer,
+            this.tsbDistributor,
+            this.tsbPurchase,
+            this.tsbInvoice});
             this.toolStrip1.Location = new System.Drawing.Point(0, 38);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1363, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(808, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // tsbProduct
             // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(114, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.tsbProduct.Image = ((System.Drawing.Image)(resources.GetObject("tsbProduct.Image")));
+            this.tsbProduct.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbProduct.Name = "tsbProduct";
+            this.tsbProduct.Size = new System.Drawing.Size(69, 22);
+            this.tsbProduct.Text = "Product";
+            this.tsbProduct.Click += new System.EventHandler(this.mainFrm_Click);
             // 
-            // toolStripButton2
+            // tsbEmployee
             // 
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(114, 22);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.tsbEmployee.Image = ((System.Drawing.Image)(resources.GetObject("tsbEmployee.Image")));
+            this.tsbEmployee.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEmployee.Name = "tsbEmployee";
+            this.tsbEmployee.Size = new System.Drawing.Size(79, 22);
+            this.tsbEmployee.Text = "Employee";
+            this.tsbEmployee.Click += new System.EventHandler(this.mainFrm_Click);
             // 
-            // toolStripButton3
+            // tsbCustomer
             // 
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(114, 22);
-            this.toolStripButton3.Text = "toolStripButton3";
+            this.tsbCustomer.Image = ((System.Drawing.Image)(resources.GetObject("tsbCustomer.Image")));
+            this.tsbCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCustomer.Name = "tsbCustomer";
+            this.tsbCustomer.Size = new System.Drawing.Size(84, 22);
+            this.tsbCustomer.Text = "Customers";
+            this.tsbCustomer.Click += new System.EventHandler(this.mainFrm_Click);
             // 
-            // toolStripButton4
+            // tsbDistributor
             // 
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(114, 22);
-            this.toolStripButton4.Text = "toolStripButton4";
+            this.tsbDistributor.Image = ((System.Drawing.Image)(resources.GetObject("tsbDistributor.Image")));
+            this.tsbDistributor.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbDistributor.Name = "tsbDistributor";
+            this.tsbDistributor.Size = new System.Drawing.Size(83, 22);
+            this.tsbDistributor.Text = "Distributor";
+            this.tsbDistributor.Click += new System.EventHandler(this.mainFrm_Click);
             // 
-            // toolStripButton5
+            // tsbPurchase
             // 
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(114, 22);
-            this.toolStripButton5.Text = "toolStripButton5";
+            this.tsbPurchase.Image = ((System.Drawing.Image)(resources.GetObject("tsbPurchase.Image")));
+            this.tsbPurchase.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbPurchase.Name = "tsbPurchase";
+            this.tsbPurchase.Size = new System.Drawing.Size(75, 22);
+            this.tsbPurchase.Text = "Purchase";
+            this.tsbPurchase.Click += new System.EventHandler(this.mainFrm_Click);
             // 
-            // toolStripButton6
+            // tsbInvoice
             // 
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(114, 22);
-            this.toolStripButton6.Text = "toolStripButton6";
+            this.tsbInvoice.Image = ((System.Drawing.Image)(resources.GetObject("tsbInvoice.Image")));
+            this.tsbInvoice.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbInvoice.Name = "tsbInvoice";
+            this.tsbInvoice.Size = new System.Drawing.Size(65, 22);
+            this.tsbInvoice.Text = "Invoice";
+            this.tsbInvoice.Click += new System.EventHandler(this.mainFrm_Click);
             // 
             // toolStrip2
             // 
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton7,
-            this.toolStripButton8,
-            this.toolStripButton9,
-            this.toolStripButton10,
-            this.toolStripButton11});
+            this.tsbAdd,
+            this.tsbFix,
+            this.tsbDelete,
+            this.tsbSave,
+            this.tsbRefresh});
             this.toolStrip2.Location = new System.Drawing.Point(0, 63);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(1363, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(808, 25);
             this.toolStrip2.TabIndex = 2;
             this.toolStrip2.Text = "toolStrip2";
             // 
-            // toolStripButton7
+            // tsbAdd
             // 
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(114, 22);
-            this.toolStripButton7.Text = "toolStripButton7";
+            this.tsbAdd.Image = ((System.Drawing.Image)(resources.GetObject("tsbAdd.Image")));
+            this.tsbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAdd.Name = "tsbAdd";
+            this.tsbAdd.Size = new System.Drawing.Size(49, 22);
+            this.tsbAdd.Text = "Add";
+            this.tsbAdd.Click += new System.EventHandler(this.mainFrm_Click);
             // 
-            // toolStripButton8
+            // tsbFix
             // 
-            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
-            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Size = new System.Drawing.Size(114, 22);
-            this.toolStripButton8.Text = "toolStripButton8";
+            this.tsbFix.Image = ((System.Drawing.Image)(resources.GetObject("tsbFix.Image")));
+            this.tsbFix.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbFix.Name = "tsbFix";
+            this.tsbFix.Size = new System.Drawing.Size(41, 22);
+            this.tsbFix.Text = "Fix";
+            this.tsbFix.Click += new System.EventHandler(this.mainFrm_Click);
             // 
-            // toolStripButton9
+            // tsbDelete
             // 
-            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
-            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.Size = new System.Drawing.Size(114, 22);
-            this.toolStripButton9.Text = "toolStripButton9";
+            this.tsbDelete.Image = ((System.Drawing.Image)(resources.GetObject("tsbDelete.Image")));
+            this.tsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbDelete.Name = "tsbDelete";
+            this.tsbDelete.Size = new System.Drawing.Size(60, 22);
+            this.tsbDelete.Text = "Delete";
+            this.tsbDelete.Click += new System.EventHandler(this.mainFrm_Click);
             // 
-            // toolStripButton10
+            // tsbSave
             // 
-            this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
-            this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton10.Name = "toolStripButton10";
-            this.toolStripButton10.Size = new System.Drawing.Size(120, 22);
-            this.toolStripButton10.Text = "toolStripButton10";
+            this.tsbSave.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tsbSave.Image = ((System.Drawing.Image)(resources.GetObject("tsbSave.Image")));
+            this.tsbSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSave.Name = "tsbSave";
+            this.tsbSave.Size = new System.Drawing.Size(51, 22);
+            this.tsbSave.Text = "Save";
             // 
-            // toolStripButton11
+            // tsbRefresh
             // 
-            this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
-            this.toolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton11.Name = "toolStripButton11";
-            this.toolStripButton11.Size = new System.Drawing.Size(120, 22);
-            this.toolStripButton11.Text = "toolStripButton11";
+            this.tsbRefresh.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tsbRefresh.Image = ((System.Drawing.Image)(resources.GetObject("tsbRefresh.Image")));
+            this.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbRefresh.Name = "tsbRefresh";
+            this.tsbRefresh.Size = new System.Drawing.Size(66, 22);
+            this.tsbRefresh.Text = "Refresh";
+            this.tsbRefresh.Click += new System.EventHandler(this.tsbRefresh_Click);
             // 
             // toolStrip3
             // 
             this.toolStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton12,
-            this.toolStripButton13,
-            this.toolStripButton14});
+            this.tsbSearch,
+            this.tsbPrint,
+            this.tsbExport,
+            this.tsbQuit});
             this.toolStrip3.Location = new System.Drawing.Point(0, 88);
             this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.Size = new System.Drawing.Size(1363, 25);
+            this.toolStrip3.Size = new System.Drawing.Size(808, 25);
             this.toolStrip3.TabIndex = 3;
             this.toolStrip3.Text = "toolStrip3";
             // 
-            // toolStripButton12
+            // tsbSearch
             // 
-            this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
-            this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton12.Name = "toolStripButton12";
-            this.toolStripButton12.Size = new System.Drawing.Size(120, 22);
-            this.toolStripButton12.Text = "toolStripButton12";
+            this.tsbSearch.Image = ((System.Drawing.Image)(resources.GetObject("tsbSearch.Image")));
+            this.tsbSearch.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSearch.Name = "tsbSearch";
+            this.tsbSearch.Size = new System.Drawing.Size(62, 22);
+            this.tsbSearch.Text = "Search";
+            this.tsbSearch.Click += new System.EventHandler(this.mainFrm_Click);
             // 
-            // toolStripButton13
+            // tsbPrint
             // 
-            this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
-            this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton13.Name = "toolStripButton13";
-            this.toolStripButton13.Size = new System.Drawing.Size(120, 22);
-            this.toolStripButton13.Text = "toolStripButton13";
+            this.tsbPrint.Image = ((System.Drawing.Image)(resources.GetObject("tsbPrint.Image")));
+            this.tsbPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbPrint.Name = "tsbPrint";
+            this.tsbPrint.Size = new System.Drawing.Size(52, 22);
+            this.tsbPrint.Text = "Print";
+            this.tsbPrint.Click += new System.EventHandler(this.mainFrm_Click);
             // 
-            // toolStripButton14
+            // tsbExport
             // 
-            this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
-            this.toolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton14.Name = "toolStripButton14";
-            this.toolStripButton14.Size = new System.Drawing.Size(120, 22);
-            this.toolStripButton14.Text = "toolStripButton14";
+            this.tsbExport.Image = ((System.Drawing.Image)(resources.GetObject("tsbExport.Image")));
+            this.tsbExport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbExport.Name = "tsbExport";
+            this.tsbExport.Size = new System.Drawing.Size(60, 22);
+            this.tsbExport.Text = "Export";
+            this.tsbExport.Click += new System.EventHandler(this.mainFrm_Click);
+            // 
+            // tsbQuit
+            // 
+            this.tsbQuit.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tsbQuit.Image = ((System.Drawing.Image)(resources.GetObject("tsbQuit.Image")));
+            this.tsbQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbQuit.Name = "tsbQuit";
+            this.tsbQuit.Size = new System.Drawing.Size(50, 22);
+            this.tsbQuit.Text = "Quit";
+            this.tsbQuit.Click += new System.EventHandler(this.tsbQuit_Click);
             // 
             // mainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1363, 750);
+            this.ClientSize = new System.Drawing.Size(808, 750);
             this.Controls.Add(this.toolStrip3);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "mainFrm";
-            this.Text = "SALES MANAGEMENT APPLICATION";
+            this.Text = "Sales Management System";
+            this.Click += new System.EventHandler(this.mainFrm_Click);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -410,43 +445,44 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem hệThốngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem chứcNăngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem productToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem employeeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem customersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem distributorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem purchaseOrderToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem invoiceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem signInToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem signoutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salesByDayToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salseByMonthToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem topBestSellersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exportToExcelToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usageInstructionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmSystem;
+        private System.Windows.Forms.ToolStripMenuItem tsmFeature;
+        private System.Windows.Forms.ToolStripMenuItem tsmHelp;
+        private System.Windows.Forms.ToolStripMenuItem tsmProduct;
+        private System.Windows.Forms.ToolStripMenuItem tsmEmployee;
+        private System.Windows.Forms.ToolStripMenuItem tsmCustomer;
+        private System.Windows.Forms.ToolStripMenuItem tsmDistributor;
+        private System.Windows.Forms.ToolStripMenuItem tsmPurchase;
+        private System.Windows.Forms.ToolStripMenuItem tsmInvoice;
+        private System.Windows.Forms.ToolStripMenuItem tsmReport;
+        private System.Windows.Forms.ToolStripMenuItem tsmSignIn;
+        private System.Windows.Forms.ToolStripMenuItem tsmSignOut;
+        private System.Windows.Forms.ToolStripMenuItem tsmChangePassword;
+        private System.Windows.Forms.ToolStripMenuItem tsmQuit;
+        private System.Windows.Forms.ToolStripMenuItem tsmSaleByDay;
+        private System.Windows.Forms.ToolStripMenuItem tsmSaleByMonth;
+        private System.Windows.Forms.ToolStripMenuItem tsmBestSeller;
+        private System.Windows.Forms.ToolStripMenuItem tsmExport;
+        private System.Windows.Forms.ToolStripMenuItem tsmUsageIns;
+        private System.Windows.Forms.ToolStripMenuItem tsmAbout;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripButton tsbProduct;
+        private System.Windows.Forms.ToolStripButton tsbEmployee;
+        private System.Windows.Forms.ToolStripButton tsbCustomer;
+        private System.Windows.Forms.ToolStripButton tsbDistributor;
+        private System.Windows.Forms.ToolStripButton tsbPurchase;
+        private System.Windows.Forms.ToolStripButton tsbInvoice;
         private System.Windows.Forms.ToolStrip toolStrip2;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
-        private System.Windows.Forms.ToolStripButton toolStripButton8;
-        private System.Windows.Forms.ToolStripButton toolStripButton9;
-        private System.Windows.Forms.ToolStripButton toolStripButton10;
-        private System.Windows.Forms.ToolStripButton toolStripButton11;
+        private System.Windows.Forms.ToolStripButton tsbAdd;
+        private System.Windows.Forms.ToolStripButton tsbFix;
+        private System.Windows.Forms.ToolStripButton tsbDelete;
+        private System.Windows.Forms.ToolStripButton tsbSave;
+        private System.Windows.Forms.ToolStripButton tsbRefresh;
         private System.Windows.Forms.ToolStrip toolStrip3;
-        private System.Windows.Forms.ToolStripButton toolStripButton12;
-        private System.Windows.Forms.ToolStripButton toolStripButton13;
-        private System.Windows.Forms.ToolStripButton toolStripButton14;
+        private System.Windows.Forms.ToolStripButton tsbSearch;
+        private System.Windows.Forms.ToolStripButton tsbPrint;
+        private System.Windows.Forms.ToolStripButton tsbExport;
+        private System.Windows.Forms.ToolStripButton tsbQuit;
     }
 }
 

@@ -13,6 +13,9 @@ namespace QuanLyBanHang
 {
     public partial class mainFrm : Form
     {
+        public Employee CurrentEmployee { get; set; }
+        public bool isThoat = true;
+        public event EventHandler DangXuat;
         public mainFrm()
         {
             InitializeComponent();
@@ -115,6 +118,30 @@ namespace QuanLyBanHang
             {
                 this.Close();
             }
+        }
+
+        private void tsbDangXuat_Click(object sender, EventArgs e)
+        {
+            DangXuat(this, new EventArgs());
+            this.Close();
+        }
+
+        private void mainFrm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (isThoat)
+                Application.Exit();
+        }
+
+        void PhanQuyen() 
+        { 
+            if (!CurrentEmployee.Role) { }
+        }
+
+        private void mainFrm_Load(object sender, EventArgs e)
+        {
+            PhanQuyen();
+            //lblWelcome.Text = "Xin chào, " + CurrentEmployee.TenNV;
+            if (CurrentEmployee.Role) { }
         }
     }
 }

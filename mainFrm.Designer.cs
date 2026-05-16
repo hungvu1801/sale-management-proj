@@ -57,6 +57,7 @@
             this.tsbDistributor = new System.Windows.Forms.ToolStripButton();
             this.tsbPurchase = new System.Windows.Forms.ToolStripButton();
             this.tsbInvoice = new System.Windows.Forms.ToolStripButton();
+            this.tsbDangXuat = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.tsbAdd = new System.Windows.Forms.ToolStripButton();
             this.tsbFix = new System.Windows.Forms.ToolStripButton();
@@ -244,7 +245,8 @@
             this.tsbCustomer,
             this.tsbDistributor,
             this.tsbPurchase,
-            this.tsbInvoice});
+            this.tsbInvoice,
+            this.tsbDangXuat});
             this.toolStrip1.Location = new System.Drawing.Point(0, 38);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(808, 25);
@@ -304,6 +306,16 @@
             this.tsbInvoice.Size = new System.Drawing.Size(65, 22);
             this.tsbInvoice.Text = "Invoice";
             this.tsbInvoice.Click += new System.EventHandler(this.mainFrm_Click);
+            // 
+            // tsbDangXuat
+            // 
+            this.tsbDangXuat.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tsbDangXuat.Image = ((System.Drawing.Image)(resources.GetObject("tsbDangXuat.Image")));
+            this.tsbDangXuat.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbDangXuat.Name = "tsbDangXuat";
+            this.tsbDangXuat.Size = new System.Drawing.Size(80, 22);
+            this.tsbDangXuat.Text = "Đăng xuất";
+            this.tsbDangXuat.Click += new System.EventHandler(this.tsbDangXuat_Click);
             // 
             // toolStrip2
             // 
@@ -428,6 +440,8 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "mainFrm";
             this.Text = "Sales Management System";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.mainFrm_FormClosed);
+            this.Load += new System.EventHandler(this.mainFrm_Load);
             this.Click += new System.EventHandler(this.mainFrm_Click);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -483,6 +497,7 @@
         private System.Windows.Forms.ToolStripButton tsbPrint;
         private System.Windows.Forms.ToolStripButton tsbExport;
         private System.Windows.Forms.ToolStripButton tsbQuit;
+        private System.Windows.Forms.ToolStripButton tsbDangXuat;
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyBanHang.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,7 @@ namespace QuanLyBanHang
 {
     public partial class mainFrm : Form
     {
-        public Employee CurrentEmployee { get; set; }
+        public NhanVien CurrentEmployee { get; set; }
         public bool isThoat = true;
         public event EventHandler DangXuat;
         public mainFrm()

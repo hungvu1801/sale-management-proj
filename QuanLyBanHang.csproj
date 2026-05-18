@@ -42,7 +42,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.5.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -130,6 +132,17 @@
     <Compile Include="mainFrm.Designer.cs">
       <DependentUpon>mainFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\ChiTietHoaDon.cs" />
+    <Compile Include="Models\ChiTietPhieuNhapHang.cs" />
+    <Compile Include="Models\DBContextModel.cs" />
+    <Compile Include="Models\HangSX.cs" />
+    <Compile Include="Models\HoaDonBanHang.cs" />
+    <Compile Include="Models\KhangHang.cs" />
+    <Compile Include="Models\NhaCungCap.cs" />
+    <Compile Include="Models\NhanVien.cs" />
+    <Compile Include="Models\PhanLoaiSP.cs" />
+    <Compile Include="Models\PhieuNhapHang.cs" />
+    <Compile Include="Models\SanPham.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDangNhap.resx">

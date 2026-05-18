@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyBanHang.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -16,6 +17,7 @@ namespace QuanLyBanHang
 {
     public partial class frmDangNhap : Form
     {
+        
         string connectionString = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
         string userName = "admin";
         string password = "admin";
@@ -82,6 +84,13 @@ namespace QuanLyBanHang
 
         private Employee GetEmployeeFromDB(string username, string password)
         {
+
+            using (var context = new DBContextModel())
+            {
+
+
+            }
+
             Employee employee = null;
 
             string query = @"select MaNV, TenNV, QuanLy, Username, Role 

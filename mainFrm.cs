@@ -22,7 +22,7 @@ namespace QuanLyBanHang
             InitializeComponent();
         }
 
-        private void hệThốngToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsmSystem_Click(object sender, EventArgs e)
         {
 
         }

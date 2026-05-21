@@ -99,7 +99,7 @@
             this.tsmSystem.Name = "tsmSystem";
             this.tsmSystem.Size = new System.Drawing.Size(94, 34);
             this.tsmSystem.Text = "&System";
-            this.tsmSystem.Click += new System.EventHandler(this.hệThốngToolStripMenuItem_Click);
+            this.tsmSystem.Click += new System.EventHandler(this.tsmSystem_Click);
             // 
             // tsmSignIn
             // 

@@ -134,7 +134,8 @@ namespace QuanLyBanHang
         }
 
         void PhanQuyen() 
-        { 
+        {
+            if (CurrentEmployee == null) return;
             if (!CurrentEmployee.Role) { }
         }
 

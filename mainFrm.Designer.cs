@@ -241,11 +241,11 @@
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbProduct,
-            this.tsbEmployee,
+            this.tsbInvoice,
             this.tsbCustomer,
             this.tsbDistributor,
             this.tsbPurchase,
-            this.tsbInvoice,
+            this.tsbEmployee,
             this.tsbDangXuat});
             this.toolStrip1.Location = new System.Drawing.Point(0, 38);
             this.toolStrip1.Name = "toolStrip1";

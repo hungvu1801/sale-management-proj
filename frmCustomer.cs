@@ -14,7 +14,7 @@ namespace QuanLyBanHang
     public partial class frmCustomer : Form
     {
         private DBContextModel dbContext;
-        private bool isAddingNew = false;
+        //private bool isAddingNew = false;
 
         public frmCustomer()
         {

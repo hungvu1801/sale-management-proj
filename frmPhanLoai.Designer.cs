@@ -1,6 +1,6 @@
 ﻿namespace QuanLyBanHang
 {
-    partial class frmCategory
+    partial class frmPhanLoai
     {
         /// <summary>
         /// Required designer variable.

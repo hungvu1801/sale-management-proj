@@ -11,12 +11,12 @@ using QuanLyBanHang.Models;
 
 namespace QuanLyBanHang
 {
-    public partial class frmCustomer : Form
+    public partial class frmKhachHang : Form
     {
         private DBContextModel dbContext;
         //private bool isAddingNew = false;
 
-        public frmCustomer()
+        public frmKhachHang()
         {
             InitializeComponent();
             dbContext = new DBContextModel();

@@ -66,17 +66,17 @@
     <Compile Include="frmBrand.Designer.cs">
       <DependentUpon>frmBrand.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCategory.cs">
+    <Compile Include="frmPhanLoai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCategory.Designer.cs">
-      <DependentUpon>frmCategory.cs</DependentUpon>
+    <Compile Include="frmPhanLoai.Designer.cs">
+      <DependentUpon>frmPhanLoai.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCustomer.cs">
+    <Compile Include="frmKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCustomer.Designer.cs">
-      <DependentUpon>frmCustomer.cs</DependentUpon>
+    <Compile Include="frmKhachHang.Designer.cs">
+      <DependentUpon>frmKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
@@ -90,11 +90,11 @@
     <Compile Include="frmDistributor.Designer.cs">
       <DependentUpon>frmDistributor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEmployee.cs">
+    <Compile Include="frmNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEmployee.Designer.cs">
-      <DependentUpon>frmEmployee.cs</DependentUpon>
+    <Compile Include="frmNhanVien.Designer.cs">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="frmInvoiceDetail.cs">
       <SubType>Form</SubType>
@@ -102,17 +102,17 @@
     <Compile Include="frmInvoiceDetail.Designer.cs">
       <DependentUpon>frmInvoiceDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProduct.cs">
+    <Compile Include="frmSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProduct.Designer.cs">
-      <DependentUpon>frmProduct.cs</DependentUpon>
+    <Compile Include="frmSanPham.Designer.cs">
+      <DependentUpon>frmSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPurchaseOrder.cs">
+    <Compile Include="frmQuanLyHangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPurchaseOrder.Designer.cs">
-      <DependentUpon>frmPurchaseOrder.cs</DependentUpon>
+    <Compile Include="frmQuanLyHangNhap.Designer.cs">
+      <DependentUpon>frmQuanLyHangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPurchaseOrderDetail.cs">
       <SubType>Form</SubType>
@@ -126,6 +126,7 @@
     <Compile Include="frmInvoice.Designer.cs">
       <DependentUpon>frmInvoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="LstGioHang.cs" />
     <Compile Include="mainFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +136,7 @@
     <Compile Include="Models\ChiTietHoaDon.cs" />
     <Compile Include="Models\ChiTietPhieuNhapHang.cs" />
     <Compile Include="Models\DBContextModel.cs" />
+    <Compile Include="Models\SanPhamGioHang.cs" />
     <Compile Include="Models\HangSX.cs" />
     <Compile Include="Models\HoaDonBanHang.cs" />
     <Compile Include="Models\KhangHang.cs" />
@@ -143,19 +145,21 @@
     <Compile Include="Models\PhanLoaiSP.cs" />
     <Compile Include="Models\PhieuNhapHang.cs" />
     <Compile Include="Models\SanPham.cs" />
+    <Compile Include="Models\SanPhamPublic.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmCustomer.resx">
-      <DependentUpon>frmCustomer.cs</DependentUpon>
+    <Compile Include="Utils.cs" />
+    <EmbeddedResource Include="frmKhachHang.resx">
+      <DependentUpon>frmKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEmployee.resx">
-      <DependentUpon>frmEmployee.cs</DependentUpon>
+    <EmbeddedResource Include="frmNhanVien.resx">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProduct.resx">
-      <DependentUpon>frmProduct.cs</DependentUpon>
+    <EmbeddedResource Include="frmSanPham.resx">
+      <DependentUpon>frmSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainFrm.resx">
       <DependentUpon>mainFrm.cs</DependentUpon>

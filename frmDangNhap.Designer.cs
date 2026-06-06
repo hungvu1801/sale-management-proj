@@ -91,7 +91,6 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(246, 20);
             this.txtUsername.TabIndex = 0;
-            this.txtUsername.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtPassword
             // 
@@ -104,7 +103,6 @@
             this.txtPassword.Size = new System.Drawing.Size(246, 20);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.UseSystemPasswordChar = true;
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // label4
             // 
@@ -116,7 +114,6 @@
             this.label4.Size = new System.Drawing.Size(176, 38);
             this.label4.TabIndex = 4;
             this.label4.Text = "TechStack";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -136,7 +133,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(162, 97);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(247, 20);
+            this.label6.Size = new System.Drawing.Size(262, 20);
             this.label6.TabIndex = 7;
             this.label6.Text = "Phần mềm quản lý linh kiện máy tính";
             // 
@@ -204,7 +201,6 @@
             this.Controls.Add(this.label4);
             this.Name = "frmDangNhap";
             this.Text = "frmDangNhap";
-            this.Load += new System.EventHandler(this.frmDangNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);

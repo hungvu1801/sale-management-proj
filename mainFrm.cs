@@ -91,15 +91,15 @@ namespace QuanLyBanHang
 
         private Dictionary<string, Type> formTypes = new Dictionary<string, Type>()
         {
-            {"tsbEmployee", typeof(frmEmployee)},
-            {"tsbCustomer", typeof(frmCustomer)},
-            {"tsbProduct", typeof(frmProduct)},
+            {"tsbEmployee", typeof(frmNhanVien)},
+            {"tsbCustomer", typeof(frmKhachHang)},
+            {"tsbProduct", typeof(frmSanPham)},
             {"tsbDistributor", typeof(frmDistributor)},
             {"tsbPurchase", typeof(frmPurchaseOrderDetail)},
             {"tsbInvoice", typeof(frmInvoiceDetail)},
-            {"tsmEmployee", typeof(frmEmployee)},
-            {"tsmCustomer", typeof(frmCustomer)},
-            {"tsmProduct", typeof(frmProduct)},
+            {"tsmEmployee", typeof(frmNhanVien)},
+            {"tsmCustomer", typeof(frmKhachHang)},
+            {"tsmProduct", typeof(frmSanPham)},
             {"tsmDistributor", typeof(frmDistributor)},
             {"tsmPurchase", typeof(frmPurchaseOrderDetail)},
             {"tsmInvoice", typeof(frmInvoiceDetail)},
@@ -113,7 +113,7 @@ namespace QuanLyBanHang
 
         private void tsbQuit_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Do you want to Exit?", "Notification", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Bạn muốn thoát?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
             if (result == DialogResult.OK)    
             {

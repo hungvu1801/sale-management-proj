@@ -37,8 +37,8 @@
             this.tsmQuit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmFeature = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmProduct = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmEmployee = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmCustomer = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmEmployee = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmDistributor = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmPurchase = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmInvoice = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,11 +52,11 @@
             this.tsmAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbProduct = new System.Windows.Forms.ToolStripButton();
-            this.tsbEmployee = new System.Windows.Forms.ToolStripButton();
+            this.tsbInvoice = new System.Windows.Forms.ToolStripButton();
             this.tsbCustomer = new System.Windows.Forms.ToolStripButton();
             this.tsbDistributor = new System.Windows.Forms.ToolStripButton();
             this.tsbPurchase = new System.Windows.Forms.ToolStripButton();
-            this.tsbInvoice = new System.Windows.Forms.ToolStripButton();
+            this.tsbEmployee = new System.Windows.Forms.ToolStripButton();
             this.tsbDangXuat = new System.Windows.Forms.ToolStripButton();
             this.toolStrip3 = new System.Windows.Forms.ToolStrip();
             this.tsbSearch = new System.Windows.Forms.ToolStripButton();
@@ -78,7 +78,7 @@
             this.tsmHelp});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1260, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1365, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -99,7 +99,7 @@
             // 
             this.tsmSignIn.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmSignIn.Name = "tsmSignIn";
-            this.tsmSignIn.Size = new System.Drawing.Size(180, 22);
+            this.tsmSignIn.Size = new System.Drawing.Size(176, 22);
             this.tsmSignIn.Text = "&Đăng nhập";
             this.tsmSignIn.Click += new System.EventHandler(this.signInToolStripMenuItem_Click);
             // 
@@ -107,21 +107,21 @@
             // 
             this.tsmSignOut.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmSignOut.Name = "tsmSignOut";
-            this.tsmSignOut.Size = new System.Drawing.Size(180, 22);
+            this.tsmSignOut.Size = new System.Drawing.Size(176, 22);
             this.tsmSignOut.Text = "&Đăng xuất";
             // 
             // tsmChangePassword
             // 
             this.tsmChangePassword.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmChangePassword.Name = "tsmChangePassword";
-            this.tsmChangePassword.Size = new System.Drawing.Size(180, 22);
+            this.tsmChangePassword.Size = new System.Drawing.Size(176, 22);
             this.tsmChangePassword.Text = "&Thay đổi Mật khẩu";
             // 
             // tsmQuit
             // 
             this.tsmQuit.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmQuit.Name = "tsmQuit";
-            this.tsmQuit.Size = new System.Drawing.Size(180, 22);
+            this.tsmQuit.Size = new System.Drawing.Size(176, 22);
             this.tsmQuit.Text = "&Thoát chương trình";
             // 
             // tsmFeature
@@ -142,31 +142,31 @@
             // 
             this.tsmProduct.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmProduct.Name = "tsmProduct";
-            this.tsmProduct.Size = new System.Drawing.Size(180, 22);
+            this.tsmProduct.Size = new System.Drawing.Size(157, 22);
             this.tsmProduct.Text = "&Sản phẩm";
             this.tsmProduct.Click += new System.EventHandler(this.mainFrm_Click);
-            // 
-            // tsmEmployee
-            // 
-            this.tsmEmployee.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsmEmployee.Name = "tsmEmployee";
-            this.tsmEmployee.Size = new System.Drawing.Size(180, 22);
-            this.tsmEmployee.Text = "&Nhân Viên";
-            this.tsmEmployee.Click += new System.EventHandler(this.mainFrm_Click);
             // 
             // tsmCustomer
             // 
             this.tsmCustomer.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmCustomer.Name = "tsmCustomer";
-            this.tsmCustomer.Size = new System.Drawing.Size(180, 22);
+            this.tsmCustomer.Size = new System.Drawing.Size(157, 22);
             this.tsmCustomer.Text = "&Khách hàng";
             this.tsmCustomer.Click += new System.EventHandler(this.mainFrm_Click);
+            // 
+            // tsmEmployee
+            // 
+            this.tsmEmployee.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmEmployee.Name = "tsmEmployee";
+            this.tsmEmployee.Size = new System.Drawing.Size(157, 22);
+            this.tsmEmployee.Text = "&Nhân Viên";
+            this.tsmEmployee.Click += new System.EventHandler(this.mainFrm_Click);
             // 
             // tsmDistributor
             // 
             this.tsmDistributor.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmDistributor.Name = "tsmDistributor";
-            this.tsmDistributor.Size = new System.Drawing.Size(180, 22);
+            this.tsmDistributor.Size = new System.Drawing.Size(157, 22);
             this.tsmDistributor.Text = "&Nhà phân phối";
             this.tsmDistributor.Click += new System.EventHandler(this.mainFrm_Click);
             // 
@@ -174,7 +174,7 @@
             // 
             this.tsmPurchase.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmPurchase.Name = "tsmPurchase";
-            this.tsmPurchase.Size = new System.Drawing.Size(180, 22);
+            this.tsmPurchase.Size = new System.Drawing.Size(157, 22);
             this.tsmPurchase.Text = "&Hóa đơn nhập";
             this.tsmPurchase.Click += new System.EventHandler(this.mainFrm_Click);
             // 
@@ -182,7 +182,7 @@
             // 
             this.tsmInvoice.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmInvoice.Name = "tsmInvoice";
-            this.tsmInvoice.Size = new System.Drawing.Size(180, 22);
+            this.tsmInvoice.Size = new System.Drawing.Size(157, 22);
             this.tsmInvoice.Text = "&Hóa đơn xuất";
             this.tsmInvoice.Click += new System.EventHandler(this.mainFrm_Click);
             // 
@@ -202,28 +202,28 @@
             // 
             this.tsmSaleByDay.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmSaleByDay.Name = "tsmSaleByDay";
-            this.tsmSaleByDay.Size = new System.Drawing.Size(180, 22);
+            this.tsmSaleByDay.Size = new System.Drawing.Size(157, 22);
             this.tsmSaleByDay.Text = "Sales by &Day";
             // 
             // tsmSaleByMonth
             // 
             this.tsmSaleByMonth.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmSaleByMonth.Name = "tsmSaleByMonth";
-            this.tsmSaleByMonth.Size = new System.Drawing.Size(180, 22);
+            this.tsmSaleByMonth.Size = new System.Drawing.Size(157, 22);
             this.tsmSaleByMonth.Text = "Salse by &Month";
             // 
             // tsmBestSeller
             // 
             this.tsmBestSeller.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmBestSeller.Name = "tsmBestSeller";
-            this.tsmBestSeller.Size = new System.Drawing.Size(180, 22);
+            this.tsmBestSeller.Size = new System.Drawing.Size(157, 22);
             this.tsmBestSeller.Text = "Top &Best Sellers";
             // 
             // tsmExport
             // 
             this.tsmExport.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmExport.Name = "tsmExport";
-            this.tsmExport.Size = new System.Drawing.Size(180, 22);
+            this.tsmExport.Size = new System.Drawing.Size(157, 22);
             this.tsmExport.Text = "&Export to Excel";
             // 
             // tsmHelp
@@ -240,14 +240,14 @@
             // 
             this.tsmUsageIns.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmUsageIns.Name = "tsmUsageIns";
-            this.tsmUsageIns.Size = new System.Drawing.Size(180, 22);
+            this.tsmUsageIns.Size = new System.Drawing.Size(166, 22);
             this.tsmUsageIns.Text = "Usage Instruction";
             // 
             // tsmAbout
             // 
             this.tsmAbout.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmAbout.Name = "tsmAbout";
-            this.tsmAbout.Size = new System.Drawing.Size(180, 22);
+            this.tsmAbout.Size = new System.Drawing.Size(166, 22);
             this.tsmAbout.Text = "About";
             // 
             // toolStrip1
@@ -263,7 +263,7 @@
             this.tsbDangXuat});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1260, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1365, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -277,15 +277,15 @@
             this.tsbProduct.Text = "Quản lý sản phẩm";
             this.tsbProduct.Click += new System.EventHandler(this.mainFrm_Click);
             // 
-            // tsbEmployee
+            // tsbInvoice
             // 
-            this.tsbEmployee.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbEmployee.Image = ((System.Drawing.Image)(resources.GetObject("tsbEmployee.Image")));
-            this.tsbEmployee.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbEmployee.Name = "tsbEmployee";
-            this.tsbEmployee.Size = new System.Drawing.Size(80, 22);
-            this.tsbEmployee.Text = "Employee";
-            this.tsbEmployee.Click += new System.EventHandler(this.mainFrm_Click);
+            this.tsbInvoice.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbInvoice.Image = ((System.Drawing.Image)(resources.GetObject("tsbInvoice.Image")));
+            this.tsbInvoice.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbInvoice.Name = "tsbInvoice";
+            this.tsbInvoice.Size = new System.Drawing.Size(120, 22);
+            this.tsbInvoice.Text = "Quản lý Hóa đơn";
+            this.tsbInvoice.Click += new System.EventHandler(this.mainFrm_Click);
             // 
             // tsbCustomer
             // 
@@ -317,15 +317,15 @@
             this.tsbPurchase.Text = "Purchase";
             this.tsbPurchase.Click += new System.EventHandler(this.mainFrm_Click);
             // 
-            // tsbInvoice
+            // tsbEmployee
             // 
-            this.tsbInvoice.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbInvoice.Image = ((System.Drawing.Image)(resources.GetObject("tsbInvoice.Image")));
-            this.tsbInvoice.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbInvoice.Name = "tsbInvoice";
-            this.tsbInvoice.Size = new System.Drawing.Size(120, 22);
-            this.tsbInvoice.Text = "Quản lý Hóa đơn";
-            this.tsbInvoice.Click += new System.EventHandler(this.mainFrm_Click);
+            this.tsbEmployee.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbEmployee.Image = ((System.Drawing.Image)(resources.GetObject("tsbEmployee.Image")));
+            this.tsbEmployee.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEmployee.Name = "tsbEmployee";
+            this.tsbEmployee.Size = new System.Drawing.Size(80, 22);
+            this.tsbEmployee.Text = "Employee";
+            this.tsbEmployee.Click += new System.EventHandler(this.mainFrm_Click);
             // 
             // tsbDangXuat
             // 
@@ -348,7 +348,7 @@
             this.tsbQuit});
             this.toolStrip3.Location = new System.Drawing.Point(0, 49);
             this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.Size = new System.Drawing.Size(1260, 25);
+            this.toolStrip3.Size = new System.Drawing.Size(1365, 25);
             this.toolStrip3.TabIndex = 3;
             this.toolStrip3.Text = "toolStrip3";
             // 
@@ -397,14 +397,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1260, 750);
+            this.ClientSize = new System.Drawing.Size(1365, 767);
             this.Controls.Add(this.toolStrip3);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "mainFrm";
-            this.Text = "Sales Management System";
+            this.Text = "Hệ Thống Quản Lý Bán Hang";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.mainFrm_FormClosed);
             this.Load += new System.EventHandler(this.mainFrm_Load);
             this.Click += new System.EventHandler(this.mainFrm_Click);

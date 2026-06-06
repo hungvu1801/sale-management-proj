@@ -1,6 +1,6 @@
 ﻿namespace QuanLyBanHang
 {
-    partial class frmCustomer
+    partial class frmKhachHang
     {
         /// <summary>
         /// Required designer variable.

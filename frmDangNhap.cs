@@ -20,16 +20,9 @@ namespace QuanLyBanHang
         public frmDangNhap()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            //TODO: Remove this code after testing
+            txtUsername.Text = "nv001";
+            txtPassword.Text = "Admin@123";
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -55,8 +48,12 @@ namespace QuanLyBanHang
                 f.Show();
                 this.Hide();
                 f.DangXuat += F_DangXuat;
-                txtPassword.Text = "";
-                txtUsername.Text = "";
+                //TODO: Remove this code after testing
+                txtUsername.Text = "nv001";
+                txtPassword.Text = "Admin@123";
+                
+                //txtPassword.Text = "";
+                //txtUsername.Text = "";
             }
             else
             {
@@ -80,36 +77,6 @@ namespace QuanLyBanHang
             {
                 return context.NhanViens.FirstOrDefault(nv => nv.Username == username && nv.Password == password);
             }            
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmDangNhap_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

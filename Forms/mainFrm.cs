@@ -1,4 +1,6 @@
 ﻿using QuanLyBanHang.Models;
+using QuanLyBanHang.Forms;
+using QuanLyBanHang.Singletons;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyBanHang
+namespace QuanLyBanHang.Forms
 {
     public partial class mainFrm : Form
     {
@@ -20,6 +22,26 @@ namespace QuanLyBanHang
         public mainFrm()
         {
             InitializeComponent();
+        }
+        private void mainFrm_Load(object sender, EventArgs e)
+        {
+            string role = "Admin";
+            if (!CurrentUsr.Instance.NhanVien.Role)
+                role = "User";
+            tsslTenNV.Text = "Nhân viên: " + CurrentUsr.Instance.NhanVien.TenNV + " - " + role;
+            PhanQuyen();
+            if (!CurrentUsr.Instance.NhanVien.Role) 
+            { 
+                tsbNhanVien.Visible = false;
+                tsmNhanVien.Visible = false;
+                tsbKhachHang.Visible = false;
+                tsmKhachHang.Visible = false;
+            }
+        }
+        private void tsmDangXuat_Click(object sender, EventArgs e)
+        {
+            DangXuat(this, new EventArgs());
+            this.Close();
         }
 
         private void tsmSystem_Click(object sender, EventArgs e)
@@ -64,8 +86,33 @@ namespace QuanLyBanHang
 
             }
         }
+        private void tsbRefresh_Click(object sender, EventArgs e)
+        {
 
-        private void ShowForm<T>()where T : Form, new()
+        }
+
+        private void tsbQuit_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn muốn thoát?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (result == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
+
+        private void tsbDangXuat_Click(object sender, EventArgs e)
+        {
+            DangXuat(this, new EventArgs());
+            this.Close();
+        }
+
+        private void mainFrm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (isThoat)
+                Application.Exit();
+        }
+        private void ShowForm<T>() where T : Form, new()
         {
             closeForm();
             foreach (Form f in this.MdiChildren)
@@ -83,6 +130,7 @@ namespace QuanLyBanHang
             form.Show();
         }
 
+
         // function close form
         private void closeForm()
         {
@@ -91,59 +139,26 @@ namespace QuanLyBanHang
 
         private Dictionary<string, Type> formTypes = new Dictionary<string, Type>()
         {
-            {"tsbEmployee", typeof(frmNhanVien)},
-            {"tsbCustomer", typeof(frmKhachHang)},
-            {"tsbProduct", typeof(frmSanPham)},
-            {"tsbDistributor", typeof(frmDistributor)},
-            {"tsbPurchase", typeof(frmPurchaseOrderDetail)},
-            {"tsbInvoice", typeof(frmInvoiceDetail)},
-            {"tsmEmployee", typeof(frmNhanVien)},
-            {"tsmCustomer", typeof(frmKhachHang)},
-            {"tsmProduct", typeof(frmSanPham)},
-            {"tsmDistributor", typeof(frmDistributor)},
-            {"tsmPurchase", typeof(frmPurchaseOrderDetail)},
-            {"tsmInvoice", typeof(frmInvoiceDetail)},
+            {"tsbNhanVien", typeof(frmNhanVien)},
+            {"tsbKhachHang", typeof(frmKhachHang)},
+            {"tsbSanPham", typeof(frmSanPham)},
+            {"tsbNPP", typeof(frmNPP)},
+            {"tsbHangNhap", typeof(frmQuanLyHangNhap)},
+            {"tsbHoaDonBanHang", typeof(frmHoaDonBanHang)},
+            {"tsmNhanVien", typeof(frmNhanVien)},
+            {"tsmKhachHang", typeof(frmKhachHang)},
+            {"tsmSanPham", typeof(frmSanPham)},
+            {"tsmNPP", typeof(frmNPP)},
+            {"tsmHangNhap", typeof(frmQuanLyHangNhap)},
+            {"tsmHoaDonBanHang", typeof(frmHoaDonBanHang)},
 
         };
 
-        private void tsbRefresh_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tsbQuit_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Bạn muốn thoát?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-
-            if (result == DialogResult.OK)    
-            {
-                this.Close();
-            }
-        }
-
-        private void tsbDangXuat_Click(object sender, EventArgs e)
-        {
-            DangXuat(this, new EventArgs());
-            this.Close();
-        }
-
-        private void mainFrm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            if (isThoat)
-                Application.Exit();
-        }
 
         void PhanQuyen() 
         {
             if (CurrentEmployee == null) return;
             if (!CurrentEmployee.Role) { }
-        }
-
-        private void mainFrm_Load(object sender, EventArgs e)
-        {
-            PhanQuyen();
-            //lblWelcome.Text = "Xin chào, " + CurrentEmployee.TenNV;
-            if (CurrentEmployee.Role) { }
         }
     }
 }

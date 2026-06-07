@@ -1,6 +1,6 @@
-﻿namespace QuanLyBanHang
+﻿namespace QuanLyBanHang.Forms
 {
-    partial class frmBrand
+    partial class frmNPP
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frmBrand";
+            this.Text = "frmDistributor";
         }
 
         #endregion

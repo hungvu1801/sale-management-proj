@@ -12,6 +12,7 @@ namespace QuanLyBanHang.Models
         public string TenSP { get; set; }
         public int SoLuong { get; set; }
         public int DonGia { get; set; }
+
         public int ThanhTien => SoLuong * DonGia;
 
     }

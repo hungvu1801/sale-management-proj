@@ -170,6 +170,7 @@ namespace QuanLyBanHang.Forms
                     TongST = newTongSoTien,
                     MaNV = maNV,
                     MaKH = maKH,
+                    NgayLap = DateTime.Now,
                 };
 
                 dbContext.HoaDonBanHangs.Add(newHD);

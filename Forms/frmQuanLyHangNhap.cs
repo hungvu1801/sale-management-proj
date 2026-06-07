@@ -247,7 +247,8 @@ namespace QuanLyBanHang.Forms
                 MaPhieuNhap = newMaPN,
                 MaNV = maNV,
                 MaNCC = maNCC,
-                TongST = newTongST
+                TongST = newTongST,
+                NgayNhap = DateTime.Now
             };
             dbContext.PhieuNhapHangs.Add(newPhieuNhapHang);
             return newMaPN;

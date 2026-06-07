@@ -1,4 +1,5 @@
 ﻿using QuanLyBanHang.Models;
+using QuanLyBanHang.Forms;
 using QuanLyBanHang.Singletons;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyBanHang
+namespace QuanLyBanHang.Forms
 {
     public partial class mainFrm : Form
     {

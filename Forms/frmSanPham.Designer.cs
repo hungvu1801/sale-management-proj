@@ -1,4 +1,4 @@
-﻿namespace QuanLyBanHang
+﻿namespace QuanLyBanHang.Forms
 {
     partial class frmSanPham
     {

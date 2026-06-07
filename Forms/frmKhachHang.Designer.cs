@@ -1,4 +1,4 @@
-﻿namespace QuanLyBanHang
+﻿namespace QuanLyBanHang.Forms
 {
     partial class frmKhachHang
     {
@@ -43,11 +43,16 @@
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnFindCus = new System.Windows.Forms.Button();
+            this.txtTimSDT = new System.Windows.Forms.TextBox();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnXoaTimKiem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -110,10 +115,15 @@
             this.dgvCustomers.AllowUserToAddRows = false;
             this.dgvCustomers.AllowUserToDeleteRows = false;
             this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCustomers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
             this.dgvCustomers.Location = new System.Drawing.Point(6, 35);
             this.dgvCustomers.Name = "dgvCustomers";
             this.dgvCustomers.ReadOnly = true;
-            this.dgvCustomers.Size = new System.Drawing.Size(744, 230);
+            this.dgvCustomers.Size = new System.Drawing.Size(643, 230);
             this.dgvCustomers.TabIndex = 12;
             this.dgvCustomers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomers_CellClick);
             // 
@@ -206,33 +216,35 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.btnFindCus);
+            this.groupBox2.Controls.Add(this.btnXoaTimKiem);
+            this.groupBox2.Controls.Add(this.txtTimSDT);
+            this.groupBox2.Controls.Add(this.btnTimKiem);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(455, 117);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(756, 62);
+            this.groupBox2.Size = new System.Drawing.Size(663, 62);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm khách hàng";
             // 
-            // textBox1
+            // txtTimSDT
             // 
-            this.textBox1.Location = new System.Drawing.Point(101, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(202, 21);
-            this.textBox1.TabIndex = 11;
+            this.txtTimSDT.Location = new System.Drawing.Point(101, 23);
+            this.txtTimSDT.Name = "txtTimSDT";
+            this.txtTimSDT.Size = new System.Drawing.Size(202, 21);
+            this.txtTimSDT.TabIndex = 11;
             // 
-            // btnFindCus
+            // btnTimKiem
             // 
-            this.btnFindCus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFindCus.Location = new System.Drawing.Point(326, 23);
-            this.btnFindCus.Name = "btnFindCus";
-            this.btnFindCus.Size = new System.Drawing.Size(75, 23);
-            this.btnFindCus.TabIndex = 10;
-            this.btnFindCus.Text = "Tìm kiếm";
-            this.btnFindCus.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.Location = new System.Drawing.Point(326, 23);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(75, 23);
+            this.btnTimKiem.TabIndex = 10;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // label1
             // 
@@ -249,7 +261,7 @@
             this.groupBox3.Controls.Add(this.dgvCustomers);
             this.groupBox3.Location = new System.Drawing.Point(455, 197);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(756, 303);
+            this.groupBox3.Size = new System.Drawing.Size(663, 303);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách khách hàng";
@@ -267,12 +279,49 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Tác vụ";
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Mã Khách Hàng";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Họ tên Khách Hàng";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 150;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Số Điện Thoại";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Địa Chỉ";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 250;
+            // 
+            // btnXoaTimKiem
+            // 
+            this.btnXoaTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaTimKiem.Location = new System.Drawing.Point(407, 22);
+            this.btnXoaTimKiem.Name = "btnXoaTimKiem";
+            this.btnXoaTimKiem.Size = new System.Drawing.Size(105, 23);
+            this.btnXoaTimKiem.TabIndex = 12;
+            this.btnXoaTimKiem.Text = "Xóa Tìm kiếm";
+            this.btnXoaTimKiem.UseVisualStyleBackColor = true;
+            this.btnXoaTimKiem.Click += new System.EventHandler(this.btnXoaTimKiem_Click);
+            // 
             // frmKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1240, 540);
+            this.ClientSize = new System.Drawing.Size(1131, 540);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -280,6 +329,7 @@
             this.Controls.Add(this.lblTitle);
             this.Name = "frmKhachHang";
             this.Text = "Quản lý Khách hàng";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmKhachHang_FormClosed);
             this.Load += new System.EventHandler(this.frmKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -310,10 +360,15 @@
         private System.Windows.Forms.Label lblSDT;
         private System.Windows.Forms.Label lblTenKH;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnFindCus;
+        private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTimSDT;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Button btnXoaTimKiem;
     }
 }

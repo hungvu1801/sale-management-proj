@@ -16,7 +16,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 
-namespace QuanLyBanHang
+namespace QuanLyBanHang.Forms
 {
     public partial class frmDangNhap : Form
     {

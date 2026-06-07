@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyBanHang
+namespace QuanLyBanHang.Forms
 {
     public partial class frmHoaDonBanHang : Form
     {
@@ -32,6 +32,7 @@ namespace QuanLyBanHang
             dbContext = new DBContextModel();
             BindingDataGioHang();
             updateSLGioHang();
+            updateTongSoTien();
         }
         private void frmHoaDonBanHang_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -52,13 +53,16 @@ namespace QuanLyBanHang
             if (maKH == null) return;
 
             string maHD = CreateHoaDon(maKH);
+            if (maHD == null) return;
 
             CreateChiTietHoaDon(maHD);
 
             Utils.ShowMessage("Thanh toán sản phẩm thành công.", txtTenKH);
-            updateSLGioHang();
-            BindingDataGioHang();
             Utils.ClearGioHang();
+            BindingDataGioHang();
+            updateSLGioHang();
+            updateTongSoTien();
+            ClearForm();
         }
         private void btnHuy_Click(object sender, EventArgs e)
         {
@@ -110,75 +114,104 @@ namespace QuanLyBanHang
             int soLuongGioHang = LstGioHang.Instance.giohang.Count();
             txtSLGioHang.Text = soLuongGioHang.ToString();
         }
-
+        private void updateTongSoTien()
+        {
+            int sum = Utils.CalcTongSoTien();
+            txtTongSoTien.Text = sum.ToString();
+        }
         private string CreateNewKhachHang()
         {
-            if (isCusFound) return selectedKhachHang.MaKH;
-            if (string.IsNullOrEmpty(txtTenKH.Text))
+            try
             {
-                Utils.ShowMessage("Vui lòng nhập tên khách hàng!", txtTenKH);
+                if (isCusFound) return selectedKhachHang.MaKH;
+                if (string.IsNullOrEmpty(txtTenKH.Text))
+                {
+                    Utils.ShowMessage("Vui lòng nhập tên khách hàng!", txtTenKH);
+                    return null;
+                }
+                if (string.IsNullOrEmpty(txtSDT.Text))
+                    // if the customer not say the phone no
+                    return "KH00";
+
+                string newMaKH = Utils.GenNewKHID(dbContext);
+                string newSDT = txtSDT.Text.Trim();
+                string newTenKH = txtTenKH.Text.Trim();
+                string newDiaChi = txtDiaChi.Text.Trim();
+
+                KhangHang newKhachHang = new KhangHang
+                {
+                    MaKH = newMaKH,
+                    SDT = newSDT,
+                    TenKH = newTenKH,
+                    DiaCHi = newDiaChi
+                };
+                dbContext.KhangHangs.Add(newKhachHang);
+                dbContext.SaveChanges();
+                return newMaKH;
+            }
+            catch (Exception ex)
+            {
+                Utils.ShowMessage(ex.Message, txtTenKH);
                 return null;
             }
-            if (string.IsNullOrEmpty(txtSDT.Text))
-                // if the customer not say the phone no
-                return "KH00";
-         
-            string newMaKH = Utils.GenNewKHID(dbContext);
-            string newTenKH = txtTenKH.Text.Trim();
-            string newDiaChi = txtDiaChi.Text.Trim();
-
-            KhangHang newKhachHang = new KhangHang
-            {
-                MaKH = newMaKH,
-                TenKH = newTenKH,
-                DiaCHi = newDiaChi
-            };
-            dbContext.KhangHangs.Add(newKhachHang);
-            dbContext.SaveChanges();
-            return newMaKH;
         }
 
         private string CreateHoaDon(string maKH)
         {
-            string maNV = CurrentUsr.Instance.NhanVien.MaNV;
-            string newMaHD = Utils.GenNewHDID(dbContext);
-            int newTongSoTien = Utils.CalcTongSoTien();
-
-            var newHD = new HoaDonBanHang
+            try
             {
-                MaHD = newMaHD,
-                TongST = newTongSoTien,
-                MaNV = maNV,
-                MaKH = maKH,
-            };
+                string maNV = CurrentUsr.Instance.NhanVien.MaNV;
+                string newMaHD = Utils.GenNewHDID(dbContext);
+                int newTongSoTien = Utils.CalcTongSoTien();
 
-            dbContext.HoaDonBanHangs.Add(newHD);
-            dbContext.SaveChanges();
-            return newMaHD;
+                var newHD = new HoaDonBanHang
+                {
+                    MaHD = newMaHD,
+                    TongST = newTongSoTien,
+                    MaNV = maNV,
+                    MaKH = maKH,
+                };
+
+                dbContext.HoaDonBanHangs.Add(newHD);
+                dbContext.SaveChanges();
+                return newMaHD;
+            }
+            catch (Exception ex)
+            {
+                Utils.ShowMessage(ex.Message, txtTenKH);
+                return null;
+            }
         }
 
         private void CreateChiTietHoaDon(string maHD)
         {
-            var maSPLst = LstGioHang.Instance.giohang.Select(sp => sp.MaSP).ToList(); // query masp in giohang
-            var sanPhamsLst = dbContext.SanPhams.Where(sp => maSPLst.Contains(sp.MaSP)).ToList();
-            foreach (var item in LstGioHang.Instance.giohang)
+            try
             {
-                // Add New record in ChiTietHoaDon
-                ChiTietHoaDon newCTHD = new ChiTietHoaDon
+                var maSPLst = LstGioHang.Instance.giohang.Select(sp => sp.MaSP).ToList(); // query masp in giohang
+                var sanPhamsLst = dbContext.SanPhams.Where(sp => maSPLst.Contains(sp.MaSP)).ToList();
+                foreach (var item in LstGioHang.Instance.giohang)
                 {
-                    MaHD = maHD,
-                    MaSP = item.MaSP,
-                    SoLuong = item.SoLuong,
-                    GiaBan = item.DonGia
-                };
-                dbContext.ChiTietHoaDons.Add(newCTHD);
+                    // Add New record in ChiTietHoaDon
+                    ChiTietHoaDon newCTHD = new ChiTietHoaDon
+                    {
+                        MaHD = maHD,
+                        MaSP = item.MaSP,
+                        SoLuong = item.SoLuong,
+                        GiaBan = item.DonGia
+                    };
+                    dbContext.ChiTietHoaDons.Add(newCTHD);
 
-                // Update SoLuong in SanPham table
-                var sanPham = sanPhamsLst.FirstOrDefault(sp => sp.MaSP == item.MaSP);
-                if (sanPham != null)
-                    sanPham.SoLuongTon -= item.SoLuong;
+                    // Update SoLuong in SanPham table
+                    var sanPham = sanPhamsLst.FirstOrDefault(sp => sp.MaSP == item.MaSP);
+                    if (sanPham != null)
+                        sanPham.SoLuongTon -= item.SoLuong;
+                }
+                dbContext.SaveChanges();
             }
-            dbContext.SaveChanges();
+            catch (Exception ex)
+            {
+                Utils.ShowMessage(ex.Message, txtTenKH);
+            }
 
         }
 
@@ -203,6 +236,14 @@ namespace QuanLyBanHang
             if (LstGioHang.Instance.giohang.Count > 0)
                 return true;
             return false;
+        }
+
+       private void ClearForm()
+        {
+            txtDiaChi.Text = "";
+            txtTenKH.Text = "";
+            txtSDT.Text = "";
+            
         }
     }
 }

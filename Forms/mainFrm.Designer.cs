@@ -1,4 +1,4 @@
-﻿namespace QuanLyBanHang
+﻿namespace QuanLyBanHang.Forms
 {
     partial class mainFrm
     {
@@ -58,16 +58,10 @@
             this.tsbHangNhap = new System.Windows.Forms.ToolStripButton();
             this.tsbNhanVien = new System.Windows.Forms.ToolStripButton();
             this.tsbDangXuat = new System.Windows.Forms.ToolStripButton();
-            this.toolStrip3 = new System.Windows.Forms.ToolStrip();
-            this.tsbSearch = new System.Windows.Forms.ToolStripButton();
-            this.tsbPrint = new System.Windows.Forms.ToolStripButton();
-            this.tsbExport = new System.Windows.Forms.ToolStripButton();
-            this.tsbQuit = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsslTenNV = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            this.toolStrip3.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,7 +75,8 @@
             this.tsmHelp});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1365, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1592, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -92,7 +87,7 @@
             this.tsmChangePassword,
             this.toolStripSeparator1,
             this.tsmQuit});
-            this.tsmSystem.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmSystem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmSystem.Name = "tsmSystem";
             this.tsmSystem.Size = new System.Drawing.Size(69, 20);
             this.tsmSystem.Text = "&Hệ thống";
@@ -100,7 +95,7 @@
             // 
             // tsmDangXuat
             // 
-            this.tsmDangXuat.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmDangXuat.Name = "tsmDangXuat";
             this.tsmDangXuat.Size = new System.Drawing.Size(180, 22);
             this.tsmDangXuat.Text = "&Đăng xuất";
@@ -108,7 +103,7 @@
             // 
             // tsmChangePassword
             // 
-            this.tsmChangePassword.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmChangePassword.Name = "tsmChangePassword";
             this.tsmChangePassword.Size = new System.Drawing.Size(180, 22);
             this.tsmChangePassword.Text = "&Thay đổi Mật khẩu";
@@ -120,7 +115,7 @@
             // 
             // tsmQuit
             // 
-            this.tsmQuit.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmQuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmQuit.Name = "tsmQuit";
             this.tsmQuit.Size = new System.Drawing.Size(180, 22);
             this.tsmQuit.Text = "&Thoát chương trình";
@@ -134,57 +129,57 @@
             this.tsmNPP,
             this.tsmHoaDonBanHang,
             this.tsmHangNhap});
-            this.tsmFeature.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmFeature.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmFeature.Name = "tsmFeature";
-            this.tsmFeature.Size = new System.Drawing.Size(81, 20);
+            this.tsmFeature.Size = new System.Drawing.Size(78, 20);
             this.tsmFeature.Text = "&Chức năng";
             // 
             // tsmSanPham
             // 
-            this.tsmSanPham.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmSanPham.Name = "tsmSanPham";
-            this.tsmSanPham.Size = new System.Drawing.Size(180, 22);
+            this.tsmSanPham.Size = new System.Drawing.Size(203, 22);
             this.tsmSanPham.Text = "&Quản Lý Sản phẩm";
             this.tsmSanPham.Click += new System.EventHandler(this.mainFrm_Click);
             // 
             // tsmKhachHang
             // 
-            this.tsmKhachHang.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmKhachHang.Name = "tsmKhachHang";
-            this.tsmKhachHang.Size = new System.Drawing.Size(157, 22);
-            this.tsmKhachHang.Text = "&Khách hàng";
+            this.tsmKhachHang.Size = new System.Drawing.Size(203, 22);
+            this.tsmKhachHang.Text = "&Quản Lý Khách hàng";
             this.tsmKhachHang.Click += new System.EventHandler(this.mainFrm_Click);
             // 
             // tsmNhanVien
             // 
-            this.tsmNhanVien.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmNhanVien.Name = "tsmNhanVien";
-            this.tsmNhanVien.Size = new System.Drawing.Size(205, 22);
+            this.tsmNhanVien.Size = new System.Drawing.Size(203, 22);
             this.tsmNhanVien.Text = "&Quản Lý Nhân Viên";
             this.tsmNhanVien.Click += new System.EventHandler(this.mainFrm_Click);
             // 
             // tsmNPP
             // 
-            this.tsmNPP.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmNPP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmNPP.Name = "tsmNPP";
-            this.tsmNPP.Size = new System.Drawing.Size(205, 22);
+            this.tsmNPP.Size = new System.Drawing.Size(203, 22);
             this.tsmNPP.Text = "&Quản Lý Nhà phân phối";
             this.tsmNPP.Click += new System.EventHandler(this.mainFrm_Click);
             // 
             // tsmHoaDonBanHang
             // 
-            this.tsmHoaDonBanHang.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmHoaDonBanHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmHoaDonBanHang.Name = "tsmHoaDonBanHang";
-            this.tsmHoaDonBanHang.Size = new System.Drawing.Size(205, 22);
+            this.tsmHoaDonBanHang.Size = new System.Drawing.Size(203, 22);
             this.tsmHoaDonBanHang.Text = "&Quản Lý Hóa đơn";
             this.tsmHoaDonBanHang.Click += new System.EventHandler(this.mainFrm_Click);
             // 
             // tsmHangNhap
             // 
-            this.tsmHangNhap.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmHangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmHangNhap.Name = "tsmHangNhap";
-            this.tsmHangNhap.Size = new System.Drawing.Size(157, 22);
-            this.tsmHangNhap.Text = "&Hóa đơn nhập";
+            this.tsmHangNhap.Size = new System.Drawing.Size(203, 22);
+            this.tsmHangNhap.Text = "&Quản Lý Hàng Nhập";
             this.tsmHangNhap.Click += new System.EventHandler(this.mainFrm_Click);
             // 
             // tsmReport
@@ -194,37 +189,37 @@
             this.tsmSaleByMonth,
             this.tsmBestSeller,
             this.tsmExport});
-            this.tsmReport.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmReport.Name = "tsmReport";
-            this.tsmReport.Size = new System.Drawing.Size(65, 20);
+            this.tsmReport.Size = new System.Drawing.Size(64, 20);
             this.tsmReport.Text = "&Báo cáo";
             // 
             // tsmSaleByDay
             // 
-            this.tsmSaleByDay.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmSaleByDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmSaleByDay.Name = "tsmSaleByDay";
-            this.tsmSaleByDay.Size = new System.Drawing.Size(157, 22);
+            this.tsmSaleByDay.Size = new System.Drawing.Size(180, 22);
             this.tsmSaleByDay.Text = "Sales by &Day";
             // 
             // tsmSaleByMonth
             // 
-            this.tsmSaleByMonth.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmSaleByMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmSaleByMonth.Name = "tsmSaleByMonth";
-            this.tsmSaleByMonth.Size = new System.Drawing.Size(157, 22);
+            this.tsmSaleByMonth.Size = new System.Drawing.Size(180, 22);
             this.tsmSaleByMonth.Text = "Salse by &Month";
             // 
             // tsmBestSeller
             // 
-            this.tsmBestSeller.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmBestSeller.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmBestSeller.Name = "tsmBestSeller";
-            this.tsmBestSeller.Size = new System.Drawing.Size(157, 22);
+            this.tsmBestSeller.Size = new System.Drawing.Size(180, 22);
             this.tsmBestSeller.Text = "Top &Best Sellers";
             // 
             // tsmExport
             // 
-            this.tsmExport.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmExport.Name = "tsmExport";
-            this.tsmExport.Size = new System.Drawing.Size(157, 22);
+            this.tsmExport.Size = new System.Drawing.Size(180, 22);
             this.tsmExport.Text = "&Export to Excel";
             // 
             // tsmHelp
@@ -232,23 +227,23 @@
             this.tsmHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmUsageIns,
             this.tsmAbout});
-            this.tsmHelp.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmHelp.Name = "tsmHelp";
-            this.tsmHelp.Size = new System.Drawing.Size(61, 20);
+            this.tsmHelp.Size = new System.Drawing.Size(64, 20);
             this.tsmHelp.Text = "&Trợ giúp";
             // 
             // tsmUsageIns
             // 
-            this.tsmUsageIns.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmUsageIns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmUsageIns.Name = "tsmUsageIns";
-            this.tsmUsageIns.Size = new System.Drawing.Size(166, 22);
+            this.tsmUsageIns.Size = new System.Drawing.Size(180, 22);
             this.tsmUsageIns.Text = "Usage Instruction";
             // 
             // tsmAbout
             // 
-            this.tsmAbout.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmAbout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmAbout.Name = "tsmAbout";
-            this.tsmAbout.Size = new System.Drawing.Size(166, 22);
+            this.tsmAbout.Size = new System.Drawing.Size(180, 22);
             this.tsmAbout.Text = "About";
             // 
             // toolStrip1
@@ -264,143 +259,89 @@
             this.tsbDangXuat});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1365, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1592, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // tsbSanPham
             // 
-            this.tsbSanPham.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbSanPham.Image = ((System.Drawing.Image)(resources.GetObject("tsbSanPham.Image")));
             this.tsbSanPham.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSanPham.Name = "tsbSanPham";
-            this.tsbSanPham.Size = new System.Drawing.Size(125, 22);
+            this.tsbSanPham.Size = new System.Drawing.Size(126, 22);
             this.tsbSanPham.Text = "Quản lý sản phẩm";
             this.tsbSanPham.Click += new System.EventHandler(this.mainFrm_Click);
             // 
             // tsbHoaDonBanHang
             // 
-            this.tsbHoaDonBanHang.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbHoaDonBanHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbHoaDonBanHang.Image = ((System.Drawing.Image)(resources.GetObject("tsbHoaDonBanHang.Image")));
             this.tsbHoaDonBanHang.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbHoaDonBanHang.Name = "tsbHoaDonBanHang";
-            this.tsbHoaDonBanHang.Size = new System.Drawing.Size(120, 22);
+            this.tsbHoaDonBanHang.Size = new System.Drawing.Size(118, 22);
             this.tsbHoaDonBanHang.Text = "Quản lý Hóa đơn";
             this.tsbHoaDonBanHang.Click += new System.EventHandler(this.mainFrm_Click);
             // 
             // tsbKhachHang
             // 
-            this.tsbKhachHang.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("tsbKhachHang.Image")));
             this.tsbKhachHang.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbKhachHang.Name = "tsbKhachHang";
-            this.tsbKhachHang.Size = new System.Drawing.Size(140, 22);
+            this.tsbKhachHang.Size = new System.Drawing.Size(137, 22);
             this.tsbKhachHang.Text = "Quản lý Khách hàng";
             this.tsbKhachHang.Click += new System.EventHandler(this.mainFrm_Click);
             // 
             // tsbNPP
             // 
-            this.tsbNPP.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbNPP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbNPP.Image = ((System.Drawing.Image)(resources.GetObject("tsbNPP.Image")));
             this.tsbNPP.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbNPP.Name = "tsbNPP";
-            this.tsbNPP.Size = new System.Drawing.Size(155, 22);
+            this.tsbNPP.Size = new System.Drawing.Size(152, 22);
             this.tsbNPP.Text = "Quản lý Nhà phân phối";
             this.tsbNPP.Click += new System.EventHandler(this.mainFrm_Click);
             // 
             // tsbHangNhap
             // 
-            this.tsbHangNhap.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbHangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbHangNhap.Image = ((System.Drawing.Image)(resources.GetObject("tsbHangNhap.Image")));
             this.tsbHangNhap.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbHangNhap.Name = "tsbHangNhap";
-            this.tsbHangNhap.Size = new System.Drawing.Size(134, 22);
+            this.tsbHangNhap.Size = new System.Drawing.Size(132, 22);
             this.tsbHangNhap.Text = "Quản lý Hàng nhập";
             this.tsbHangNhap.Click += new System.EventHandler(this.mainFrm_Click);
             // 
             // tsbNhanVien
             // 
-            this.tsbNhanVien.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("tsbNhanVien.Image")));
             this.tsbNhanVien.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbNhanVien.Name = "tsbNhanVien";
-            this.tsbNhanVien.Size = new System.Drawing.Size(129, 22);
+            this.tsbNhanVien.Size = new System.Drawing.Size(126, 22);
             this.tsbNhanVien.Text = "Quản lý Nhân viên";
             this.tsbNhanVien.Click += new System.EventHandler(this.mainFrm_Click);
             // 
             // tsbDangXuat
             // 
             this.tsbDangXuat.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.tsbDangXuat.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbDangXuat.Image = ((System.Drawing.Image)(resources.GetObject("tsbDangXuat.Image")));
             this.tsbDangXuat.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbDangXuat.Name = "tsbDangXuat";
-            this.tsbDangXuat.Size = new System.Drawing.Size(85, 22);
+            this.tsbDangXuat.Size = new System.Drawing.Size(83, 22);
             this.tsbDangXuat.Text = "Đăng xuất";
             this.tsbDangXuat.Click += new System.EventHandler(this.tsbDangXuat_Click);
-            // 
-            // toolStrip3
-            // 
-            this.toolStrip3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbSearch,
-            this.tsbPrint,
-            this.tsbExport,
-            this.tsbQuit});
-            this.toolStrip3.Location = new System.Drawing.Point(0, 49);
-            this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.Size = new System.Drawing.Size(1365, 25);
-            this.toolStrip3.TabIndex = 3;
-            this.toolStrip3.Text = "toolStrip3";
-            // 
-            // tsbSearch
-            // 
-            this.tsbSearch.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbSearch.Image = ((System.Drawing.Image)(resources.GetObject("tsbSearch.Image")));
-            this.tsbSearch.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbSearch.Name = "tsbSearch";
-            this.tsbSearch.Size = new System.Drawing.Size(65, 22);
-            this.tsbSearch.Text = "Search";
-            this.tsbSearch.Click += new System.EventHandler(this.mainFrm_Click);
-            // 
-            // tsbPrint
-            // 
-            this.tsbPrint.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbPrint.Image = ((System.Drawing.Image)(resources.GetObject("tsbPrint.Image")));
-            this.tsbPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbPrint.Name = "tsbPrint";
-            this.tsbPrint.Size = new System.Drawing.Size(50, 22);
-            this.tsbPrint.Text = "Print";
-            this.tsbPrint.Click += new System.EventHandler(this.mainFrm_Click);
-            // 
-            // tsbExport
-            // 
-            this.tsbExport.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbExport.Image = ((System.Drawing.Image)(resources.GetObject("tsbExport.Image")));
-            this.tsbExport.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbExport.Name = "tsbExport";
-            this.tsbExport.Size = new System.Drawing.Size(61, 22);
-            this.tsbExport.Text = "Export";
-            this.tsbExport.Click += new System.EventHandler(this.mainFrm_Click);
-            // 
-            // tsbQuit
-            // 
-            this.tsbQuit.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.tsbQuit.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbQuit.Image = ((System.Drawing.Image)(resources.GetObject("tsbQuit.Image")));
-            this.tsbQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbQuit.Name = "tsbQuit";
-            this.tsbQuit.Size = new System.Drawing.Size(129, 22);
-            this.tsbQuit.Text = "Thoát chương trình";
-            this.tsbQuit.Click += new System.EventHandler(this.tsbQuit_Click);
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsslTenNV});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 745);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 863);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1365, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1592, 22);
             this.statusStrip1.TabIndex = 5;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -413,15 +354,16 @@
             // 
             // mainFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1365, 767);
+            this.ClientSize = new System.Drawing.Size(1592, 885);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.toolStrip3);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "mainFrm";
             this.Text = "Hệ Thống Quản Lý Bán Hang";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.mainFrm_FormClosed);
@@ -431,8 +373,6 @@
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.toolStrip3.ResumeLayout(false);
-            this.toolStrip3.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -469,11 +409,6 @@
         private System.Windows.Forms.ToolStripButton tsbNPP;
         private System.Windows.Forms.ToolStripButton tsbHangNhap;
         private System.Windows.Forms.ToolStripButton tsbHoaDonBanHang;
-        private System.Windows.Forms.ToolStrip toolStrip3;
-        private System.Windows.Forms.ToolStripButton tsbSearch;
-        private System.Windows.Forms.ToolStripButton tsbPrint;
-        private System.Windows.Forms.ToolStripButton tsbExport;
-        private System.Windows.Forms.ToolStripButton tsbQuit;
         private System.Windows.Forms.ToolStripButton tsbDangXuat;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.StatusStrip statusStrip1;

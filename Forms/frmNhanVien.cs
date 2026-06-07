@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyBanHang
+namespace QuanLyBanHang.Forms
 {
-    public partial class frmPhanLoai : Form
+    public partial class frmNhanVien : Form
     {
-        public frmPhanLoai()
+        public frmNhanVien()
         {
             InitializeComponent();
         }

@@ -1,10 +1,12 @@
 ﻿using QuanLyBanHang.Models;
+using QuanLyBanHang.Singletons;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,16 +22,27 @@ namespace QuanLyBanHang
 
         private SanPhamGioHang selectedSanPhamGioHang;
 
-        
+
 
         public frmSanPham()
         {
             InitializeComponent();
+            
+        }
+
+        private void frmSanPham_Load(object sender, EventArgs e)
+        {
+            // Init the resources in the load form event
             dbContext = new DBContextModel();
             LoadDataSP();
             updateSLGioHang();
         }
 
+        private void frmSanPham_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Clean up the connections
+            dbContext?.Dispose();
+        }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
@@ -67,16 +80,36 @@ namespace QuanLyBanHang
 
         private void btnXoaMotSP_Click(object sender, EventArgs e)
         {
-
+            LstGioHang.Instance.giohang.Remove(selectedSanPhamGioHang);
+            BindingDataGioHang();
+            updateSLGioHang();
         }
 
         private void btnXoaGioHang_Click(object sender, EventArgs e)
         {
-
+            DialogResult = MessageBox.Show("Bạn có chắc chắn giỏ hàng không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (DialogResult == DialogResult.Yes)
+            {
+                LstGioHang.Instance.giohang.Clear();
+                BindingDataGioHang();
+            }
         }
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
+            var mainForm = this.MdiParent as mainFrm;
+            if (mainForm != null)
+            {
+                MethodInfo showMethod = mainForm.GetType()
+                .GetMethod("ShowForm", BindingFlags.NonPublic | BindingFlags.Instance);
+
+                if (showMethod != null)
+                {
+                    showMethod = showMethod.MakeGenericMethod(typeof(frmHoaDonBanHang));
+                    showMethod.Invoke(mainForm, null); // mainForm, không phải this
+                }
+            }
+
 
         }
 
@@ -90,16 +123,6 @@ namespace QuanLyBanHang
 
                 selectedSanPham = dbContext.SanPhams.FirstOrDefault(s => s.MaSP == maSP);
 
-
-
-                //if (selectedStudent != null)
-                //{
-                //    txtMSV.Text = dvgSV.Rows[e.RowIndex].Cells[0].Value.ToString();
-                //    txtHoTen.Text = dvgSV.Rows[e.RowIndex].Cells[1].Value.ToString();
-                //    cbKhoa.SelectedItem = dvgSV.Rows[e.RowIndex].Cells[2].Value.ToString();
-                //    txtDiem.Text = dvgSV.Rows[e.RowIndex].Cells[3].Value.ToString();
-                //}
-
             }
         }
 
@@ -108,31 +131,37 @@ namespace QuanLyBanHang
             if (e.RowIndex != -1)
             {
                 string selectedmaSP = dvgGioHang.Rows[e.RowIndex].Cells[0].Value.ToString();
-                var item = LstGioHang.Instance.giohang.FirstOrDefault(sp => sp.MaSP == selectedmaSP);
+                selectedSanPhamGioHang = LstGioHang.Instance.giohang
+                    .FirstOrDefault(sp => sp.MaSP == selectedmaSP);
 
-                if (item == null) return;
-                
-                if (e.ColumnIndex == dvgGioHang.Columns["btnTang"].Index)
-                {
-                    int soLuongHienTai = item.SoLuong;
-                    soLuongHienTai++;
-                    item.SoLuong = soLuongHienTai;
-                    BindingDataGioHang();
-                }
-                if (e.ColumnIndex == dvgGioHang.Columns["btnGiam"].Index)
-                {
-                    int soLuongHienTai = item.SoLuong;
-                        
-                    if (soLuongHienTai > 1)
-                    {
-                        soLuongHienTai--;
-                    }
+                if (selectedSanPhamGioHang == null) return;
+                ChangeQuantityBtn(e);
 
-                    item.SoLuong = soLuongHienTai;
-                    BindingDataGioHang();
-                }
             }
-            
+
+        }
+
+        private void ChangeQuantityBtn(DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dvgGioHang.Columns["btnTang"].Index)
+            {
+                int soLuongHienTai = selectedSanPhamGioHang.SoLuong;
+                soLuongHienTai++;
+                selectedSanPhamGioHang.SoLuong = soLuongHienTai;
+                BindingDataGioHang();
+            }
+            if (e.ColumnIndex == dvgGioHang.Columns["btnGiam"].Index)
+            {
+                int soLuongHienTai = selectedSanPhamGioHang.SoLuong;
+
+                if (soLuongHienTai > 1)
+                {
+                    soLuongHienTai--;
+                }
+
+                selectedSanPhamGioHang.SoLuong = soLuongHienTai;
+                BindingDataGioHang();
+            }
         }
 
         private void updateSLGioHang()
@@ -140,51 +169,8 @@ namespace QuanLyBanHang
             int soLuongGioHang = LstGioHang.Instance.giohang.Count();
             txtSLGioHang.Text = soLuongGioHang.ToString();
         }
-        private void Insert()
-        {
+        
 
-            SanPham newSanPham = new SanPham
-            {
-                MaSP = GenNewMaSP(),
-                MaHangSX = cbHangSX.SelectedValue.ToString(),
-                TenSP = txtTenSP.Text,
-                SoLuongTon = 0,
-                GiaNhapHienTai = 0,
-                GiaBanHienTai = 0
-            };
-
-        }
-
-        private string GenNewMaSP()
-        {
-            // Return increment MaSP
-            string lastMaSP = dbContext.SanPhams
-                .OrderByDescending(sp => sp.MaSP)
-                .Select(sp => sp.MaSP)
-                .FirstOrDefault();
-            if (lastMaSP == null)
-                return "SP001";
-            int number = int.Parse(lastMaSP.Substring(2));
-            number++;
-            return "SP" + number.ToString();
-        }
-
-
-        private bool ValidateInsert()
-        {
-
-            if (string.IsNullOrEmpty(this.txtMaSP.Text))
-            {
-                Utils.ShowMessage("Vui lòng nhập mã sản phẩm.", this.txtMaSP);
-                return false;
-            }
-            if (string.IsNullOrEmpty(txtTenSP.Text))
-            {
-                Utils.ShowMessage("Vui lòng nhập tên sản phẩm!", this.txtTenSP);
-                return false;
-            }
-            return true;
-        }
         private void LoadDataSP()
         {
             try
@@ -216,7 +202,7 @@ namespace QuanLyBanHang
             }
         }
 
-        
+
         private void initCB(List<HangSX> lstHangSX, List<PhanLoaiSP> lstPhanLoai)
         {
             this.cbHangSX.DataSource = lstHangSX;
@@ -306,6 +292,6 @@ namespace QuanLyBanHang
             BindingDataSP(result);
         }
 
-        
+
     }
 }

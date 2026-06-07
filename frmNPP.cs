@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyBanHang
 {
-    public partial class frmDistributor : Form
+    public partial class frmNPP : Form
     {
-        public frmDistributor()
+        public frmNPP()
         {
             InitializeComponent();
         }

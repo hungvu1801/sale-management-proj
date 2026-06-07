@@ -377,6 +377,7 @@ GO
 -- 7. KHACH HANG (20)
 -- =============================================
 INSERT INTO [KhangHang] ([MaKH],[TenKH],[SDT],[DiaCHi]) VALUES
+('KH00', N'Khách Hàng Lẻ',    '0000000000',N'Không có địa chỉ'),
 ('KH01', N'Trần Minh Khoa',    '0901111222', N'123 Nguyễn Huệ, Quận 1, TP HCM'),
 ('KH02', N'Phạm Quốc Hùng',    '0912333444', N'45 Lê Lợi, Quận 3, TP HCM'),
 ('KH03', N'Lê Văn Tú',         '0933555666', N'78 Võ Nguyên Giáp, Thủ Đức, TP HCM'),

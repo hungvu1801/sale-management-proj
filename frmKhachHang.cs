@@ -22,11 +22,10 @@ namespace QuanLyBanHang
             dbContext = new DBContextModel();
         }
 
-        private void frmCustomer_Load(object sender, EventArgs e)
+        private void frmKhachHang_Load(object sender, EventArgs e)
         {
             LoadCustomers();
         }
-
         private void LoadCustomers()
         {
             try
@@ -173,5 +172,7 @@ namespace QuanLyBanHang
                 txtDiaChi.Text = row.Cells["DiaCHi"].Value?.ToString() ?? "";
             }
         }
+
+
     }
 }

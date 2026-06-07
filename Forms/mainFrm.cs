@@ -143,13 +143,13 @@ namespace QuanLyBanHang.Forms
             {"tsbKhachHang", typeof(frmKhachHang)},
             {"tsbSanPham", typeof(frmSanPham)},
             {"tsbNPP", typeof(frmNPP)},
-            {"tsbHangNhap", typeof(frmHangNhap)},
+            {"tsbHangNhap", typeof(frmQuanLyHangNhap)},
             {"tsbHoaDonBanHang", typeof(frmHoaDonBanHang)},
             {"tsmNhanVien", typeof(frmNhanVien)},
             {"tsmKhachHang", typeof(frmKhachHang)},
             {"tsmSanPham", typeof(frmSanPham)},
             {"tsmNPP", typeof(frmNPP)},
-            {"tsmHangNhap", typeof(frmHangNhap)},
+            {"tsmHangNhap", typeof(frmQuanLyHangNhap)},
             {"tsmHoaDonBanHang", typeof(frmHoaDonBanHang)},
 
         };

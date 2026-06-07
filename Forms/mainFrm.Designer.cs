@@ -46,7 +46,6 @@
             this.tsmSaleByDay = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmSaleByMonth = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmBestSeller = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmExport = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmUsageIns = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAbout = new System.Windows.Forms.ToolStripMenuItem();
@@ -187,8 +186,7 @@
             this.tsmReport.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmSaleByDay,
             this.tsmSaleByMonth,
-            this.tsmBestSeller,
-            this.tsmExport});
+            this.tsmBestSeller});
             this.tsmReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmReport.Name = "tsmReport";
             this.tsmReport.Size = new System.Drawing.Size(64, 20);
@@ -198,29 +196,22 @@
             // 
             this.tsmSaleByDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmSaleByDay.Name = "tsmSaleByDay";
-            this.tsmSaleByDay.Size = new System.Drawing.Size(180, 22);
+            this.tsmSaleByDay.Size = new System.Drawing.Size(163, 22);
             this.tsmSaleByDay.Text = "Sales by &Day";
             // 
             // tsmSaleByMonth
             // 
             this.tsmSaleByMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmSaleByMonth.Name = "tsmSaleByMonth";
-            this.tsmSaleByMonth.Size = new System.Drawing.Size(180, 22);
+            this.tsmSaleByMonth.Size = new System.Drawing.Size(163, 22);
             this.tsmSaleByMonth.Text = "Salse by &Month";
             // 
             // tsmBestSeller
             // 
             this.tsmBestSeller.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmBestSeller.Name = "tsmBestSeller";
-            this.tsmBestSeller.Size = new System.Drawing.Size(180, 22);
+            this.tsmBestSeller.Size = new System.Drawing.Size(163, 22);
             this.tsmBestSeller.Text = "Top &Best Sellers";
-            // 
-            // tsmExport
-            // 
-            this.tsmExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsmExport.Name = "tsmExport";
-            this.tsmExport.Size = new System.Drawing.Size(180, 22);
-            this.tsmExport.Text = "&Export to Excel";
             // 
             // tsmHelp
             // 
@@ -236,14 +227,14 @@
             // 
             this.tsmUsageIns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmUsageIns.Name = "tsmUsageIns";
-            this.tsmUsageIns.Size = new System.Drawing.Size(180, 22);
+            this.tsmUsageIns.Size = new System.Drawing.Size(169, 22);
             this.tsmUsageIns.Text = "Usage Instruction";
             // 
             // tsmAbout
             // 
             this.tsmAbout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmAbout.Name = "tsmAbout";
-            this.tsmAbout.Size = new System.Drawing.Size(180, 22);
+            this.tsmAbout.Size = new System.Drawing.Size(169, 22);
             this.tsmAbout.Text = "About";
             // 
             // toolStrip1
@@ -399,7 +390,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmSaleByDay;
         private System.Windows.Forms.ToolStripMenuItem tsmSaleByMonth;
         private System.Windows.Forms.ToolStripMenuItem tsmBestSeller;
-        private System.Windows.Forms.ToolStripMenuItem tsmExport;
         private System.Windows.Forms.ToolStripMenuItem tsmUsageIns;
         private System.Windows.Forms.ToolStripMenuItem tsmAbout;
         private System.Windows.Forms.ToolStrip toolStrip1;

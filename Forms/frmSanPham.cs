@@ -87,10 +87,10 @@ namespace QuanLyBanHang.Forms
 
         private void btnXoaGioHang_Click(object sender, EventArgs e)
         {
-            DialogResult = MessageBox.Show("Bạn có chắc chắn giỏ hàng không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult = MessageBox.Show("Bạn có chắc Xóa giỏ hàng không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (DialogResult == DialogResult.Yes)
             {
-                LstGioHang.Instance.giohang.Clear();
+                Utils.ClearGioHang();
                 BindingDataGioHang();
             }
         }

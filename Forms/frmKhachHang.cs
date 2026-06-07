@@ -174,10 +174,10 @@ namespace QuanLyBanHang.Forms
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgvCustomers.Rows[e.RowIndex];
-                txtMaKH.Text = row.Cells["MaKH"].Value?.ToString() ?? "";
-                txtTenKH.Text = row.Cells["TenKH"].Value?.ToString() ?? "";
-                txtSDT.Text = row.Cells["SDT"].Value?.ToString() ?? "";
-                txtDiaChi.Text = row.Cells["DiaCHi"].Value?.ToString() ?? "";
+                txtMaKH.Text = row.Cells[0].Value?.ToString();
+                txtTenKH.Text = row.Cells[1].Value?.ToString();
+                txtSDT.Text = row.Cells[2].Value?.ToString();
+                txtDiaChi.Text = row.Cells[3].Value?.ToString();
             }
         }
 

@@ -53,6 +53,12 @@
             this.btnThemGioHang = new System.Windows.Forms.Button();
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.dvgGioHang = new System.Windows.Forms.DataGridView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnXoaGioHang = new System.Windows.Forms.Button();
+            this.btnXoaMotSP = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtSLGioHang = new System.Windows.Forms.TextBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,12 +66,6 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnTang = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnGiam = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnXoaGioHang = new System.Windows.Forms.Button();
-            this.btnXoaMotSP = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtSLGioHang = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
@@ -333,53 +333,6 @@
             this.dvgGioHang.TabIndex = 13;
             this.dvgGioHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgGioHang_CellClick);
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Mã Sản Phẩm";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tên Sản Phẩm";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Số Lượng";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Đơn Giá";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Thành Tiền";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // btnTang
-            // 
-            this.btnTang.HeaderText = "Tăng";
-            this.btnTang.Name = "btnTang";
-            this.btnTang.ReadOnly = true;
-            this.btnTang.Text = "+";
-            this.btnTang.UseColumnTextForButtonValue = true;
-            // 
-            // btnGiam
-            // 
-            this.btnGiam.HeaderText = "Giảm";
-            this.btnGiam.Name = "btnGiam";
-            this.btnGiam.ReadOnly = true;
-            this.btnGiam.Text = "-";
-            this.btnGiam.UseColumnTextForButtonValue = true;
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dvgGioHang);
@@ -444,6 +397,53 @@
             this.txtSLGioHang.Name = "txtSLGioHang";
             this.txtSLGioHang.Size = new System.Drawing.Size(124, 20);
             this.txtSLGioHang.TabIndex = 12;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã Sản Phẩm";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tên Sản Phẩm";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Số Lượng";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Đơn Giá";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Thành Tiền";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // btnTang
+            // 
+            this.btnTang.HeaderText = "Tăng";
+            this.btnTang.Name = "btnTang";
+            this.btnTang.ReadOnly = true;
+            this.btnTang.Text = "+";
+            this.btnTang.UseColumnTextForButtonValue = true;
+            // 
+            // btnGiam
+            // 
+            this.btnGiam.HeaderText = "Giảm";
+            this.btnGiam.Name = "btnGiam";
+            this.btnGiam.ReadOnly = true;
+            this.btnGiam.Text = "-";
+            this.btnGiam.UseColumnTextForButtonValue = true;
             // 
             // frmSanPham
             // 

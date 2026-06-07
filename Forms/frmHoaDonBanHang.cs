@@ -116,7 +116,7 @@ namespace QuanLyBanHang.Forms
         }
         private void updateTongSoTien()
         {
-            int sum = Utils.CalcTongSoTien();
+            int sum = Utils.CalcTongSoTienGioHang();
             txtTongSoTien.Text = sum.ToString();
         }
         private string CreateNewKhachHang()
@@ -162,7 +162,7 @@ namespace QuanLyBanHang.Forms
             {
                 string maNV = CurrentUsr.Instance.NhanVien.MaNV;
                 string newMaHD = Utils.GenNewHDID(dbContext);
-                int newTongSoTien = Utils.CalcTongSoTien();
+                int newTongSoTien = Utils.CalcTongSoTienGioHang();
 
                 var newHD = new HoaDonBanHang
                 {

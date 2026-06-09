@@ -102,8 +102,8 @@ namespace QuanLyBanHang.Forms
                 dvgGioHang.Rows[idx].Cells[0].Value = sp.MaSP;
                 dvgGioHang.Rows[idx].Cells[1].Value = sp.TenSP;
                 dvgGioHang.Rows[idx].Cells[2].Value = sp.SoLuong;
-                dvgGioHang.Rows[idx].Cells[3].Value = sp.DonGia;
-                dvgGioHang.Rows[idx].Cells[4].Value = sp.ThanhTien;
+                dvgGioHang.Rows[idx].Cells[3].Value = sp.DonGia.ToString("N0");
+                dvgGioHang.Rows[idx].Cells[4].Value = sp.ThanhTien.ToString("N0");
             }
 
         }
@@ -112,7 +112,7 @@ namespace QuanLyBanHang.Forms
         private void updateSLGioHang()
         {
             int soLuongGioHang = LstGioHang.Instance.giohang.Count();
-            txtSLGioHang.Text = soLuongGioHang.ToString();
+            txtSLGioHang.Text = soLuongGioHang.ToString("N0");
         }
         private void updateTongSoTien()
         {

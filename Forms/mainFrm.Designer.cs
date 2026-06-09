@@ -88,13 +88,12 @@
             this.tsmSystem.Name = "tsmSystem";
             this.tsmSystem.Size = new System.Drawing.Size(69, 20);
             this.tsmSystem.Text = "&Hệ thống";
-            this.tsmSystem.Click += new System.EventHandler(this.tsmSystem_Click);
             // 
             // tsmDangXuat
             // 
             this.tsmDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmDangXuat.Name = "tsmDangXuat";
-            this.tsmDangXuat.Size = new System.Drawing.Size(176, 22);
+            this.tsmDangXuat.Size = new System.Drawing.Size(180, 22);
             this.tsmDangXuat.Text = "&Đăng xuất";
             this.tsmDangXuat.Click += new System.EventHandler(this.tsmDangXuat_Click);
             // 
@@ -102,20 +101,20 @@
             // 
             this.tsmDoiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmDoiMatKhau.Name = "tsmDoiMatKhau";
-            this.tsmDoiMatKhau.Size = new System.Drawing.Size(176, 22);
+            this.tsmDoiMatKhau.Size = new System.Drawing.Size(180, 22);
             this.tsmDoiMatKhau.Text = "&Thay đổi Mật khẩu";
             this.tsmDoiMatKhau.Click += new System.EventHandler(this.mainFrm_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(173, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // tsmQuit
             // 
             this.tsmQuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmQuit.Name = "tsmQuit";
-            this.tsmQuit.Size = new System.Drawing.Size(176, 22);
+            this.tsmQuit.Size = new System.Drawing.Size(180, 22);
             this.tsmQuit.Text = "&Thoát chương trình";
             this.tsmQuit.Click += new System.EventHandler(this.tsmQuit_Click);
             // 
@@ -194,7 +193,7 @@
             // 
             this.tsmDoanhSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmDoanhSo.Name = "tsmDoanhSo";
-            this.tsmDoanhSo.Size = new System.Drawing.Size(180, 22);
+            this.tsmDoanhSo.Size = new System.Drawing.Size(129, 22);
             this.tsmDoanhSo.Text = "&Doanh Số";
             this.tsmDoanhSo.Click += new System.EventHandler(this.mainFrm_Click);
             // 

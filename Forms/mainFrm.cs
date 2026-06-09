@@ -39,16 +39,6 @@ namespace QuanLyBanHang.Forms
             this.Close();
         }
 
-        private void tsmSystem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void signInToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void mainFrm_Click(object sender, EventArgs e)
         {
             string controlName = string.Empty;

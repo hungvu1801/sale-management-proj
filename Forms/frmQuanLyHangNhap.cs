@@ -39,7 +39,7 @@ namespace QuanLyBanHang.Forms
 
             if (sp != null) 
             {
-                txtGiaNhap.Text = sp.GiaNhapHienTai.ToString();
+                txtGiaNhap.Text = sp.GiaNhapHienTai.ToString("N0");
             }
         }
         private void btnHuy_Click(object sender, EventArgs e)
@@ -168,8 +168,8 @@ namespace QuanLyBanHang.Forms
                 dvgPhieuNhapHang.Rows[idx].Cells[0].Value = sp.MaSP;
                 dvgPhieuNhapHang.Rows[idx].Cells[1].Value = sp.TenSP;
                 dvgPhieuNhapHang.Rows[idx].Cells[2].Value = sp.SoLuong;
-                dvgPhieuNhapHang.Rows[idx].Cells[3].Value = sp.GiaNhap;
-                dvgPhieuNhapHang.Rows[idx].Cells[4].Value = sp.ThanhTien;
+                dvgPhieuNhapHang.Rows[idx].Cells[3].Value = sp.GiaNhap.ToString("N0");
+                dvgPhieuNhapHang.Rows[idx].Cells[4].Value = sp.ThanhTien.ToString("N0");
                 dvgPhieuNhapHang.Rows[idx].Cells[5].Value = sp.TenNCC;
             }
 

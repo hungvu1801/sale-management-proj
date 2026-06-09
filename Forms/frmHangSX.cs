@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyBanHang.Singletons;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,17 @@ namespace QuanLyBanHang.Forms
         public frmHangSX()
         {
             InitializeComponent();
+        }
+
+        private void txtMaHangSX_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PhanQuyen()
+        {
+            bool isAdmin = CurrentUsr.Instance.NhanVien.Role;
+            //btnXoaNPP.Enabled = isAdmin;
         }
     }
 }

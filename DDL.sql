@@ -105,27 +105,27 @@ Primary Key  ([MaKH])
 go
 
 
-Alter table [HoaDonBanHang] add  foreign key([MaNV]) references [NhanVien] ([MaNV]) 
+Alter table [HoaDonBanHang] add  foreign key([MaNV]) references [NhanVien] ([MaNV]) ON DELETE CASCADE
 go
-Alter table [PhieuNhapHang] add  foreign key([MaNV]) references [NhanVien] ([MaNV]) 
+Alter table [PhieuNhapHang] add  foreign key([MaNV]) references [NhanVien] ([MaNV]) ON DELETE CASCADE
 go
-Alter table [PhieuNhapHang] add  foreign key([MaNCC]) references [NhaCungCap] ([MaNCC]) 
+Alter table [PhieuNhapHang] add  foreign key([MaNCC]) references [NhaCungCap] ([MaNCC]) ON DELETE CASCADE
 go
-Alter table [NhaCungCap_Hang] add  foreign key([MaNCC]) references [NhaCungCap] ([MaNCC]) 
+Alter table [NhaCungCap_Hang] add  foreign key([MaNCC]) references [NhaCungCap] ([MaNCC]) ON DELETE CASCADE
 go
-Alter table [ChiTietPhieuNhapHang] add  foreign key([MaSP]) references [SanPham] ([MaSP]) 
+Alter table [ChiTietPhieuNhapHang] add  foreign key([MaSP]) references [SanPham] ([MaSP]) ON DELETE CASCADE
 go
-Alter table [ChiTietHoaDon] add  foreign key([MaSP]) references [SanPham] ([MaSP]) 
+Alter table [ChiTietHoaDon] add  foreign key([MaSP]) references [SanPham] ([MaSP]) ON DELETE CASCADE
 go
-Alter table [SanPham] add  foreign key([MaPL]) references [PhanLoaiSP] ([MaPL]) 
+Alter table [SanPham] add  foreign key([MaPL]) references [PhanLoaiSP] ([MaPL]) ON DELETE CASCADE
 go
-Alter table [NhaCungCap_Hang] add  foreign key([MaHangSX]) references [HangSX] ([MaHangSX]) 
+Alter table [NhaCungCap_Hang] add  foreign key([MaHangSX]) references [HangSX] ([MaHangSX]) ON DELETE CASCADE
 go
-Alter table [ChiTietPhieuNhapHang] add  foreign key([MaPhieuNhap]) references [PhieuNhapHang] ([MaPhieuNhap]) 
+Alter table [ChiTietPhieuNhapHang] add  foreign key([MaPhieuNhap]) references [PhieuNhapHang] ([MaPhieuNhap]) ON DELETE CASCADE
 go
-Alter table [ChiTietHoaDon] add  foreign key([MaHD]) references [HoaDonBanHang] ([MaHD]) 
+Alter table [ChiTietHoaDon] add  foreign key([MaHD]) references [HoaDonBanHang] ([MaHD]) ON DELETE CASCADE
 go
-Alter table [HoaDonBanHang] add  foreign key([MaKH]) references [KhangHang] ([MaKH]) 
+Alter table [HoaDonBanHang] add  foreign key([MaKH]) references [KhangHang] ([MaKH]) ON DELETE CASCADE
 go
 
 
@@ -769,3 +769,35 @@ SET NgayNhap = DATEADD(DAY, -ABS(CHECKSUM(NEWID())) % 365, GETDATE())
 WHERE NgayNhap IS NULL;
 
 GO
+
+ALTER TABLE NhaCungCap ADD DiaChi NVARCHAR(200);
+ALTER TABLE NhaCungCap ADD SDT NVARCHAR(15);
+ALTER TABLE NhaCungCap ADD NgayTao DATETIME DEFAULT GETDATE();
+
+UPDATE NhaCungCap SET NgayTao = DATEADD(DAY, -ABS(CHECKSUM(NEWID())) % 365, GETDATE())
+
+UPDATE NhaCungCap SET 
+    SDT = CONCAT('02', RIGHT(CAST(ABS(CHECKSUM(NEWID())) AS VARCHAR), 8)),
+    DiaChi = CASE MaNCC
+        WHEN 'NCC01' THEN N'Quận 1, TP.HCM'
+        WHEN 'NCC02' THEN N'Quận 3, TP.HCM'
+        WHEN 'NCC03' THEN N'Quận 5, TP.HCM'
+        WHEN 'NCC04' THEN N'Quận 7, TP.HCM'
+        WHEN 'NCC05' THEN N'Quận Bình Thạnh, TP.HCM'
+        WHEN 'NCC06' THEN N'Quận Tân Bình, TP.HCM'
+        WHEN 'NCC07' THEN N'Quận Gò Vấp, TP.HCM'
+        WHEN 'NCC08' THEN N'Quận 10, TP.HCM'
+        WHEN 'NCC09' THEN N'Quận 11, TP.HCM'
+        WHEN 'NCC10' THEN N'Quận 12, TP.HCM'
+        WHEN 'NCC11' THEN N'Quận Phú Nhuận, TP.HCM'
+        WHEN 'NCC12' THEN N'Quận Bình Tân, TP.HCM'
+        WHEN 'NCC13' THEN N'Quận 2, TP.HCM'
+        WHEN 'NCC14' THEN N'Quận 4, TP.HCM'
+        WHEN 'NCC15' THEN N'Hoàn Kiếm, Hà Nội'
+        WHEN 'NCC16' THEN N'Quận 6, TP.HCM'
+        WHEN 'NCC17' THEN N'Quận 8, TP.HCM'
+        WHEN 'NCC18' THEN N'Quận 9, TP.HCM'
+        WHEN 'NCC19' THEN N'Quận Thủ Đức, TP.HCM'
+        WHEN 'NCC20' THEN N'Quận Tân Phú, TP.HCM'
+    END;
+go

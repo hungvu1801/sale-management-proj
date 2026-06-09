@@ -32,7 +32,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsmSystem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmDangXuat = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmChangePassword = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmDoiMatKhau = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmQuit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmFeature = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,7 +83,7 @@
             // 
             this.tsmSystem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmDangXuat,
-            this.tsmChangePassword,
+            this.tsmDoiMatKhau,
             this.toolStripSeparator1,
             this.tsmQuit});
             this.tsmSystem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -100,12 +100,13 @@
             this.tsmDangXuat.Text = "&Đăng xuất";
             this.tsmDangXuat.Click += new System.EventHandler(this.tsmDangXuat_Click);
             // 
-            // tsmChangePassword
+            // tsmDoiMatKhau
             // 
-            this.tsmChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsmChangePassword.Name = "tsmChangePassword";
-            this.tsmChangePassword.Size = new System.Drawing.Size(180, 22);
-            this.tsmChangePassword.Text = "&Thay đổi Mật khẩu";
+            this.tsmDoiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmDoiMatKhau.Name = "tsmDoiMatKhau";
+            this.tsmDoiMatKhau.Size = new System.Drawing.Size(180, 22);
+            this.tsmDoiMatKhau.Text = "&Thay đổi Mật khẩu";
+            this.tsmDoiMatKhau.Click += new System.EventHandler(this.mainFrm_Click);
             // 
             // toolStripSeparator1
             // 
@@ -118,6 +119,7 @@
             this.tsmQuit.Name = "tsmQuit";
             this.tsmQuit.Size = new System.Drawing.Size(180, 22);
             this.tsmQuit.Text = "&Thoát chương trình";
+            this.tsmQuit.Click += new System.EventHandler(this.tsmQuit_Click);
             // 
             // tsmFeature
             // 
@@ -137,7 +139,7 @@
             // 
             this.tsmSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmSanPham.Name = "tsmSanPham";
-            this.tsmSanPham.Size = new System.Drawing.Size(203, 22);
+            this.tsmSanPham.Size = new System.Drawing.Size(202, 22);
             this.tsmSanPham.Text = "&Quản Lý Sản phẩm";
             this.tsmSanPham.Click += new System.EventHandler(this.mainFrm_Click);
             // 
@@ -145,7 +147,7 @@
             // 
             this.tsmKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmKhachHang.Name = "tsmKhachHang";
-            this.tsmKhachHang.Size = new System.Drawing.Size(203, 22);
+            this.tsmKhachHang.Size = new System.Drawing.Size(202, 22);
             this.tsmKhachHang.Text = "&Quản Lý Khách hàng";
             this.tsmKhachHang.Click += new System.EventHandler(this.mainFrm_Click);
             // 
@@ -153,7 +155,7 @@
             // 
             this.tsmNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmNhanVien.Name = "tsmNhanVien";
-            this.tsmNhanVien.Size = new System.Drawing.Size(203, 22);
+            this.tsmNhanVien.Size = new System.Drawing.Size(202, 22);
             this.tsmNhanVien.Text = "&Quản Lý Nhân Viên";
             this.tsmNhanVien.Click += new System.EventHandler(this.mainFrm_Click);
             // 
@@ -161,15 +163,15 @@
             // 
             this.tsmNPP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmNPP.Name = "tsmNPP";
-            this.tsmNPP.Size = new System.Drawing.Size(203, 22);
-            this.tsmNPP.Text = "&Quản Lý Nhà phân phối";
+            this.tsmNPP.Size = new System.Drawing.Size(202, 22);
+            this.tsmNPP.Text = "&Quản Lý Nhà Cung Cấp";
             this.tsmNPP.Click += new System.EventHandler(this.mainFrm_Click);
             // 
             // tsmHoaDonBanHang
             // 
             this.tsmHoaDonBanHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmHoaDonBanHang.Name = "tsmHoaDonBanHang";
-            this.tsmHoaDonBanHang.Size = new System.Drawing.Size(203, 22);
+            this.tsmHoaDonBanHang.Size = new System.Drawing.Size(202, 22);
             this.tsmHoaDonBanHang.Text = "&Quản Lý Hóa đơn";
             this.tsmHoaDonBanHang.Click += new System.EventHandler(this.mainFrm_Click);
             // 
@@ -177,7 +179,7 @@
             // 
             this.tsmHangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmHangNhap.Name = "tsmHangNhap";
-            this.tsmHangNhap.Size = new System.Drawing.Size(203, 22);
+            this.tsmHangNhap.Size = new System.Drawing.Size(202, 22);
             this.tsmHangNhap.Text = "&Quản Lý Hàng Nhập";
             this.tsmHangNhap.Click += new System.EventHandler(this.mainFrm_Click);
             // 
@@ -229,6 +231,7 @@
             this.tsmUsageIns.Name = "tsmUsageIns";
             this.tsmUsageIns.Size = new System.Drawing.Size(169, 22);
             this.tsmUsageIns.Text = "Usage Instruction";
+            this.tsmUsageIns.Click += new System.EventHandler(this.tsmUsageIns_Click);
             // 
             // tsmAbout
             // 
@@ -236,6 +239,7 @@
             this.tsmAbout.Name = "tsmAbout";
             this.tsmAbout.Size = new System.Drawing.Size(169, 22);
             this.tsmAbout.Text = "About";
+            this.tsmAbout.Click += new System.EventHandler(this.tsmAbout_Click);
             // 
             // toolStrip1
             // 
@@ -290,8 +294,8 @@
             this.tsbNPP.Image = ((System.Drawing.Image)(resources.GetObject("tsbNPP.Image")));
             this.tsbNPP.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbNPP.Name = "tsbNPP";
-            this.tsbNPP.Size = new System.Drawing.Size(152, 22);
-            this.tsbNPP.Text = "Quản lý Nhà phân phối";
+            this.tsbNPP.Size = new System.Drawing.Size(151, 22);
+            this.tsbNPP.Text = "Quản lý Nhà Cung Cấp";
             this.tsbNPP.Click += new System.EventHandler(this.mainFrm_Click);
             // 
             // tsbHangNhap
@@ -385,7 +389,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmHoaDonBanHang;
         private System.Windows.Forms.ToolStripMenuItem tsmReport;
         private System.Windows.Forms.ToolStripMenuItem tsmDangXuat;
-        private System.Windows.Forms.ToolStripMenuItem tsmChangePassword;
+        private System.Windows.Forms.ToolStripMenuItem tsmDoiMatKhau;
         private System.Windows.Forms.ToolStripMenuItem tsmQuit;
         private System.Windows.Forms.ToolStripMenuItem tsmSaleByDay;
         private System.Windows.Forms.ToolStripMenuItem tsmSaleByMonth;

@@ -109,8 +109,6 @@ namespace QuanLyBanHang.Forms
                     showMethod.Invoke(mainForm, null); // mainForm, không phải this
                 }
             }
-
-
         }
 
         private void dgvSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -259,37 +257,45 @@ namespace QuanLyBanHang.Forms
         }
         private void Search()
         {
-            string tenSP = txtTenSP.Text.Trim();
-            string maHangSX = cbHangSX.SelectedValue?.ToString();
-            string maPL = cbPhanLoai.SelectedValue?.ToString();
-
-            // start querying
-
-            var query = dbContext.SanPhams
-                .Include("HangSX")
-                .Include("PhanLoaiSP")
-                .AsQueryable();
-
-            if (!string.IsNullOrEmpty(tenSP))
-                query = query.Where(sp => sp.TenSP.Contains(tenSP));
-
-            if (!string.IsNullOrEmpty(maHangSX))
-                query = query.Where(sp => sp.MaHangSX == maHangSX);
-
-            if (maPL != null)
-                query = query.Where(sp => sp.MaPL == maPL);
-
-            List<SanPhamPublic> result = query.Select(sp => new SanPhamPublic
+            try
             {
-                MaSP = sp.MaSP,
-                TenSP = sp.TenSP,
-                TenPL = sp.PhanLoaiSP.TenPL,
-                TenHangSX = sp.HangSX.TenHangSX,
-                SoLuongTon = sp.SoLuongTon,
-                GiaBanHienTai = sp.GiaBanHienTai
-            }).ToList();
+                string tenSP = txtTenSP.Text.Trim();
+                string maHangSX = cbHangSX.SelectedValue?.ToString();
+                string maPL = cbPhanLoai.SelectedValue?.ToString();
 
-            BindingDataSP(result);
+                // start querying
+
+                var query = dbContext.SanPhams
+                    .Include("HangSX")
+                    .Include("PhanLoaiSP")
+                    .AsQueryable();
+
+                if (!string.IsNullOrEmpty(tenSP))
+                    query = query.Where(sp => sp.TenSP.Contains(tenSP));
+
+                if (!string.IsNullOrEmpty(maHangSX))
+                    query = query.Where(sp => sp.MaHangSX == maHangSX);
+
+                if (maPL != null)
+                    query = query.Where(sp => sp.MaPL == maPL);
+
+                List<SanPhamPublic> result = query.Select(sp => new SanPhamPublic
+                {
+                    MaSP = sp.MaSP,
+                    TenSP = sp.TenSP,
+                    TenPL = sp.PhanLoaiSP.TenPL,
+                    TenHangSX = sp.HangSX.TenHangSX,
+                    SoLuongTon = sp.SoLuongTon,
+                    GiaBanHienTai = sp.GiaBanHienTai
+                }).ToList();
+
+                BindingDataSP(result);
+            }
+            catch (Exception ex)
+            {
+                Utils.ShowMessage("Lỗi tìm kiếm thông tin: " + ex.Message, txtMaSP);
+            }
+
         }
 
 

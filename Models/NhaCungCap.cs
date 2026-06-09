@@ -24,6 +24,12 @@ namespace QuanLyBanHang.Models
         [StringLength(50)]
         public string TenNCC { get; set; }
 
+        public string DiaChi { get; set; }
+
+        public string SDT { get; set; }
+
+        public DateTime NgayTao { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuNhapHang> PhieuNhapHangs { get; set; }
 

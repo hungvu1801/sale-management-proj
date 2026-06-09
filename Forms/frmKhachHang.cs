@@ -27,6 +27,7 @@ namespace QuanLyBanHang.Forms
         {
             dbContext = new DBContextModel();
             LoadCustomers();
+            PhanQuyen();
         }
 
         private void frmKhachHang_FormClosed(object sender, FormClosedEventArgs e)
@@ -212,6 +213,10 @@ namespace QuanLyBanHang.Forms
             BindingDataKhachHang(searchLst);
         }
 
-        
+        private void PhanQuyen()
+        {
+            bool isAdmin = CurrentUsr.Instance.NhanVien.Role;
+            btnXoa.Visible = isAdmin;
+        }
     }
 }

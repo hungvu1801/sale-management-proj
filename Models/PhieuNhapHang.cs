@@ -29,6 +29,8 @@ namespace QuanLyBanHang.Models
 
         public int TongST { get; set; }
 
+        public DateTime NgayNhap { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietPhieuNhapHang> ChiTietPhieuNhapHangs { get; set; }
 

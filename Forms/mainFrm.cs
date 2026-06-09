@@ -160,6 +160,7 @@ namespace QuanLyBanHang.Forms
             {"tsmHangNhap", typeof(frmQuanLyHangNhap)},
             {"tsmDoiMatKhau", typeof(frmDoiMatKhau)},
             {"tsmHoaDonBanHang", typeof(frmHoaDonBanHang)},
+            {"tsmDoanhSo", typeof(frmBaoCao)},
         };
 
 

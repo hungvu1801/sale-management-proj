@@ -43,7 +43,7 @@
             this.tsmHoaDonBanHang = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmHangNhap = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmReport = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmSaleByDay = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmDoanhSo = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmUsageIns = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAbout = new System.Windows.Forms.ToolStripMenuItem();
@@ -184,19 +184,19 @@
             // tsmReport
             // 
             this.tsmReport.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmSaleByDay});
+            this.tsmDoanhSo});
             this.tsmReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmReport.Name = "tsmReport";
             this.tsmReport.Size = new System.Drawing.Size(64, 20);
             this.tsmReport.Text = "&Báo cáo";
             // 
-            // tsmSaleByDay
+            // tsmDoanhSo
             // 
-            this.tsmSaleByDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsmSaleByDay.Name = "tsmSaleByDay";
-            this.tsmSaleByDay.Size = new System.Drawing.Size(180, 22);
-            this.tsmSaleByDay.Text = "&Doanh Số";
-            this.tsmSaleByDay.Click += new System.EventHandler(this.mainFrm_Click);
+            this.tsmDoanhSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmDoanhSo.Name = "tsmDoanhSo";
+            this.tsmDoanhSo.Size = new System.Drawing.Size(180, 22);
+            this.tsmDoanhSo.Text = "&Doanh Số";
+            this.tsmDoanhSo.Click += new System.EventHandler(this.mainFrm_Click);
             // 
             // tsmHelp
             // 
@@ -374,7 +374,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmDangXuat;
         private System.Windows.Forms.ToolStripMenuItem tsmDoiMatKhau;
         private System.Windows.Forms.ToolStripMenuItem tsmQuit;
-        private System.Windows.Forms.ToolStripMenuItem tsmSaleByDay;
+        private System.Windows.Forms.ToolStripMenuItem tsmDoanhSo;
         private System.Windows.Forms.ToolStripMenuItem tsmUsageIns;
         private System.Windows.Forms.ToolStripMenuItem tsmAbout;
         private System.Windows.Forms.ToolStrip toolStrip1;

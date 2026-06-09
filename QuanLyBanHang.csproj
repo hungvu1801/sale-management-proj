@@ -74,12 +74,6 @@
     <Compile Include="Models\SanPhamPhieuNhapHang.cs" />
     <Compile Include="Singletons\CurrentUsr.cs" />
     <Compile Include="Employee.cs" />
-    <Compile Include="Forms\frmHangSX.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmHangSX.Designer.cs">
-      <DependentUpon>frmHangSX.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\frmPhanLoai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,9 +148,6 @@
     <Compile Include="Utils.cs" />
     <EmbeddedResource Include="Forms\frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmHangSX.resx">
-      <DependentUpon>frmHangSX.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmHoaDonBanHang.resx">
       <DependentUpon>frmHoaDonBanHang.cs</DependentUpon>

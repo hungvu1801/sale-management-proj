@@ -44,8 +44,6 @@
             this.tsmHangNhap = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmReport = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmSaleByDay = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmSaleByMonth = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmBestSeller = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmUsageIns = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAbout = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,7 +64,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmSystem,
             this.tsmFeature,
@@ -96,7 +94,7 @@
             // 
             this.tsmDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmDangXuat.Name = "tsmDangXuat";
-            this.tsmDangXuat.Size = new System.Drawing.Size(180, 22);
+            this.tsmDangXuat.Size = new System.Drawing.Size(176, 22);
             this.tsmDangXuat.Text = "&Đăng xuất";
             this.tsmDangXuat.Click += new System.EventHandler(this.tsmDangXuat_Click);
             // 
@@ -104,20 +102,20 @@
             // 
             this.tsmDoiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmDoiMatKhau.Name = "tsmDoiMatKhau";
-            this.tsmDoiMatKhau.Size = new System.Drawing.Size(180, 22);
+            this.tsmDoiMatKhau.Size = new System.Drawing.Size(176, 22);
             this.tsmDoiMatKhau.Text = "&Thay đổi Mật khẩu";
             this.tsmDoiMatKhau.Click += new System.EventHandler(this.mainFrm_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(173, 6);
             // 
             // tsmQuit
             // 
             this.tsmQuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmQuit.Name = "tsmQuit";
-            this.tsmQuit.Size = new System.Drawing.Size(180, 22);
+            this.tsmQuit.Size = new System.Drawing.Size(176, 22);
             this.tsmQuit.Text = "&Thoát chương trình";
             this.tsmQuit.Click += new System.EventHandler(this.tsmQuit_Click);
             // 
@@ -186,9 +184,7 @@
             // tsmReport
             // 
             this.tsmReport.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmSaleByDay,
-            this.tsmSaleByMonth,
-            this.tsmBestSeller});
+            this.tsmSaleByDay});
             this.tsmReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmReport.Name = "tsmReport";
             this.tsmReport.Size = new System.Drawing.Size(64, 20);
@@ -198,22 +194,9 @@
             // 
             this.tsmSaleByDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmSaleByDay.Name = "tsmSaleByDay";
-            this.tsmSaleByDay.Size = new System.Drawing.Size(163, 22);
-            this.tsmSaleByDay.Text = "Sales by &Day";
-            // 
-            // tsmSaleByMonth
-            // 
-            this.tsmSaleByMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsmSaleByMonth.Name = "tsmSaleByMonth";
-            this.tsmSaleByMonth.Size = new System.Drawing.Size(163, 22);
-            this.tsmSaleByMonth.Text = "Salse by &Month";
-            // 
-            // tsmBestSeller
-            // 
-            this.tsmBestSeller.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsmBestSeller.Name = "tsmBestSeller";
-            this.tsmBestSeller.Size = new System.Drawing.Size(163, 22);
-            this.tsmBestSeller.Text = "Top &Best Sellers";
+            this.tsmSaleByDay.Size = new System.Drawing.Size(180, 22);
+            this.tsmSaleByDay.Text = "&Doanh Số";
+            this.tsmSaleByDay.Click += new System.EventHandler(this.mainFrm_Click);
             // 
             // tsmHelp
             // 
@@ -243,7 +226,7 @@
             // 
             // toolStrip1
             // 
-            this.toolStrip1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbSanPham,
             this.tsbHoaDonBanHang,
@@ -392,8 +375,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmDoiMatKhau;
         private System.Windows.Forms.ToolStripMenuItem tsmQuit;
         private System.Windows.Forms.ToolStripMenuItem tsmSaleByDay;
-        private System.Windows.Forms.ToolStripMenuItem tsmSaleByMonth;
-        private System.Windows.Forms.ToolStripMenuItem tsmBestSeller;
         private System.Windows.Forms.ToolStripMenuItem tsmUsageIns;
         private System.Windows.Forms.ToolStripMenuItem tsmAbout;
         private System.Windows.Forms.ToolStrip toolStrip1;

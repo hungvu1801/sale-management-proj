@@ -5,10 +5,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Data.Entity.Infrastructure.Design.Executor;
 
 namespace QuanLyBanHang.Forms
 {
@@ -62,6 +64,7 @@ namespace QuanLyBanHang.Forms
             }    
             string maPN = CreatePhieuNhap();
             CreateCTPhieuNhap(maPN);
+            UpdateSL();
             dbContext.SaveChanges();
             Utils.ClearPhieuNhapHang();
             ClearForm();
@@ -69,6 +72,7 @@ namespace QuanLyBanHang.Forms
             Utils.ShowMessage("Nhập hàng thành công!", txtGiaNhap);
             initTxt();
         }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
             if (!ValidateThemSanPhamIsAvailable()) return;
@@ -180,7 +184,10 @@ namespace QuanLyBanHang.Forms
             string tenSP = cbSanPham.Text;
             string maNCC = cbNhaCungCap.SelectedValue.ToString();
             string tenNCC = cbNhaCungCap.Text;
-            int giaNhap = Convert.ToInt32(txtGiaNhap.Text);
+            int giaNhap = int.Parse(
+                txtGiaNhap.Text,
+                NumberStyles.AllowThousands,
+                CultureInfo.CurrentCulture);
             int soLuong = (int)sbSoLuong.Value;
 
             if (!LstCTPhieuNhap.Instance.CtPhieuNhap.Any())
@@ -258,6 +265,7 @@ namespace QuanLyBanHang.Forms
         {
             foreach(SanPhamPhieuNhapHang sp in LstCTPhieuNhap.Instance.CtPhieuNhap)
             {
+
                 ChiTietPhieuNhapHang ct = new ChiTietPhieuNhapHang
                 {
                     MaPhieuNhap = maPN,
@@ -265,9 +273,22 @@ namespace QuanLyBanHang.Forms
                     SoLuong = sp.SoLuong,
                     GiaNhap = sp.GiaNhap,
                 };
+ 
                 dbContext.ChiTietPhieuNhapHangs.Add(ct);
             }    
         }
-        
+
+        private void UpdateSL()
+        {
+            foreach (SanPhamPhieuNhapHang sp in LstCTPhieuNhap.Instance.CtPhieuNhap)
+            {
+                SanPham spUpdate = dbContext.SanPhams.FirstOrDefault(spU => spU.MaSP == sp.MaSP);
+                if (spUpdate == null) return; 
+                int slOld = spUpdate.SoLuongTon;
+                spUpdate.SoLuongTon = slOld + sp.SoLuong;
+               
+            }
+        }
+
     }
 }
